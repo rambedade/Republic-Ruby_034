@@ -16,6 +16,7 @@ import {
   useBreakpointValue,
   useDisclosure,
   Image,
+  Container,
 } from "@chakra-ui/react";
 import {
   HamburgerIcon,
@@ -46,16 +47,17 @@ export default function Navbar() {
   }, [auth]);
 
   return (
-    <Box>
+    <Box borderBottom={1}
+    borderStyle={"solid"}
+    borderColor={useColorModeValue("gray.200", "gray.900")}>
+      <Container maxW={'container.lg'}>
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
         minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
-        borderBottom={1}
-        borderStyle={"solid"}
-        borderColor={useColorModeValue("gray.200", "gray.900")}
+        
         align={"center"}
       >
         <Flex
@@ -95,9 +97,10 @@ export default function Navbar() {
           {/* Conditional rendering based on login state */}
           {isLoggedIn ? (
             <Button
+
               onClick={() => auth.signOut()}
               fontSize={"sm"}
-              fontWeight={400}
+              fontWeight={800}
               color={"#ff3a00"}
               variant={"outline"}
             >
@@ -108,7 +111,7 @@ export default function Navbar() {
               <Button
                 as={NavLink}
                 fontSize={"sm"}
-                fontWeight={400}
+                fontWeight={800}
                 to={"login"}
                 borderColor={"#ff3a00"}
                 color="#ff3a00"
@@ -120,7 +123,7 @@ export default function Navbar() {
                 as={NavLink}
                 display={{ base: "none", md: "inline-flex" }}
                 fontSize={"sm"}
-                fontWeight={600}
+                fontWeight={800}
                 color={"white"}
                 bg={"#ff3a00"}
                 to={"register"}
@@ -138,6 +141,7 @@ export default function Navbar() {
       <Collapse in={isOpen} animateOpacity>
         <MobileNav />
       </Collapse>
+      </Container>
     </Box>
   );
 }
@@ -148,7 +152,7 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue("white", "gray.800");
 
   return (
-    <Stack direction={"row"} spacing={4} display={"flex"} alignItems={"center"}>
+    <Stack  direction={"row"} spacing={4} display={"flex"} alignItems={"center"}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
@@ -158,11 +162,12 @@ const DesktopNav = () => {
                 p={2}
                 to={navItem.href ?? "#"}
                 fontSize={"sm"}
-                fontWeight={500}
+                fontWeight={700}
                 color={linkColor}
                 _hover={{
                   textDecoration: "none",
-                  color: linkHoverColor,
+                  color: '#ff4f00',
+                  'fontWeight':'800'
                 }}
               >
                 {navItem.label}
@@ -195,7 +200,7 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
-      as="a"
+      as=""
       href={href}
       role={"group"}
       display={"block"}
