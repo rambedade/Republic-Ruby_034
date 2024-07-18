@@ -7,6 +7,7 @@ import { AboutPage } from "../Pages/AboutPage";
 import { PagenotFound } from "../component/LandingPage/PagenotFound";
 import { ArticlesPage } from "../Pages/ArticlesPage";
 import { AuthRoute } from "../component/firebase/AuthRoute";
+import { ProfilePage } from "../Pages/ProfilePage";
 
 export const AllRoutes = () => {
   return (
@@ -14,6 +15,7 @@ export const AllRoutes = () => {
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      <Route path="/profile" element={<ProfilePage />} />
       <Route path="/about" element={<AboutPage />} />
       <Route
         path="/articles"

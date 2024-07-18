@@ -19,7 +19,7 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useNavigate } from "react-router-dom";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, setDoc } from "firebase/firestore";
 
 import { useRef, useEffect } from "react";
 //import { app } from "../../config/firebase";
@@ -50,12 +50,13 @@ export default function Register() {
       console.log(userCredential);
       const user = userCredential.user;
 
-      console.log("adding doc" + user);
-      await addDoc(collection(firestoreInstance, "users"), {
+      const docRef = doc(firestoreInstance, "users", user.uid);
+      await setDoc(docRef, {
         uid: user.uid,
         firstName: firstName,
         lastName: lastName,
         email: email,
+        displayName: firstName + " " + lastName,
       });
 
       console.log("User registration successful:", user);
