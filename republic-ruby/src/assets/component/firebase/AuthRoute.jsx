@@ -16,7 +16,7 @@ export const AuthRoute = (props) => {
         setLoading(false);
       } else {
         console.log("navigate to register");
-        navigate("register");
+        navigate("/register");
         console.log(navigate);
       }
     });

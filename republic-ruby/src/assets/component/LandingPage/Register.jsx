@@ -14,9 +14,11 @@ import {
   useColorModeValue,
   Link,
 } from "@chakra-ui/react";
+import 'animate.css';
+import Swal from 'sweetalert2'
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { collection, addDoc } from "firebase/firestore";
@@ -25,22 +27,28 @@ import { useRef, useEffect } from "react";
 //import { app } from "../../config/firebase";
 import { app, authMain, firestoreInstance } from "../../config/firebase";
 
+
 export default function Register() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
   const signUpEmailRef = useRef(null);
   const signUpPasswordRef = useRef(null);
-  const navigate = useNavigate(null);
+  const navigate = useNavigate();
 
+  const handle_form_submit = (e) =>{
+    e.preventDefault();
+    handleSignUpWithEmailPassword()
+  }
   const handleSignUpWithEmailPassword = async () => {
+    setIsSubmitting(true);
     const firstName = firstNameRef.current?.value;
     const lastName = lastNameRef.current?.value;
     const email = signUpEmailRef.current?.value;
     const password = signUpPasswordRef.current?.value;
-    console.log(firstName + " " + lastName + " " + email + " " + password);
+    //console.log(firstName + " " + lastName + " " + email + " " + password);
     try {
       const userCredential = await createUserWithEmailAndPassword(
         authMain,
@@ -59,22 +67,33 @@ export default function Register() {
       });
 
       console.log("User registration successful:", user);
-      navigate("/login");
+      navigate("/dashboard");
     } catch (error) {
+      let temp_error
       switch (error.code) {
         case "auth/email-already-in-use":
-          setError("Email already in use.");
+          setError((prev)=>"Email already in use.");
+          temp_error = "Email already in use."
           break;
         case "auth/invalid-email":
           setError("Invalid email address.");
+          temp_error = "Invalid email address."
           break;
         case "auth/weak-password":
           setError("Password is too weak.");
+          temp_error = "Password is too weak."
           break;
         default:
           setError("Sign-up failed. Please try again.");
+          temp_error = "Sign-up failed. Please try again."
       }
-      console.error("Error registering user:", error);
+      //console.error("Error registering user:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: temp_error,
+      });
+      setIsSubmitting(false);
     }
   };
 
@@ -87,6 +106,7 @@ export default function Register() {
       wrap={"nowrap"}
       py={12}
       bg={useColorModeValue("gray.50", "gray.800")}
+      bgGradient={'linear-gradient(169deg, rgba(255,255,255,1) 39%, rgba(255,79,0,1) 100%);'}
     >
       <Box maxW={"md"}>
         <Stack spacing={8} mx={"auto"} maxW={"lg"} px={6}>
@@ -103,32 +123,35 @@ export default function Register() {
             bg={useColorModeValue("white", "gray.700")}
             boxShadow={"lg"}
             p={8}
+            className="animate__animated animate__tada"
           >
+            <form onSubmit={(e)=>handle_form_submit(e)}>
             <Stack spacing={4}>
               <HStack>
                 <Box>
                   <FormControl id="firstName" isRequired>
                     <FormLabel>First Name</FormLabel>
-                    <Input ref={firstNameRef} type="text" />
+                    <Input ref={firstNameRef} type="text" pattern="^[A-Za-z]{3,}$" required/>
                   </FormControl>
                 </Box>
                 <Box>
                   <FormControl id="lastName">
                     <FormLabel>Last Name</FormLabel>
-                    <Input ref={lastNameRef} type="text" />
+                    <Input ref={lastNameRef} type="text" pattern="^[A-Za-z]{3,}$"/>
                   </FormControl>
                 </Box>
               </HStack>
               <FormControl id="email" isRequired>
                 <FormLabel>Email address</FormLabel>
-                <Input ref={signUpEmailRef} type="email" />
+                <Input ref={signUpEmailRef} type="email" required/>
               </FormControl>
-              <FormControl id="password" isRequired>
+              <FormControl id="password" isRequired={true}>
                 <FormLabel>Password</FormLabel>
                 <InputGroup>
                   <Input
                     ref={signUpPasswordRef}
                     type={showPassword ? "text" : "password"}
+                    required
                   />
                   <InputRightElement h={"full"}>
                     <Button
@@ -144,7 +167,7 @@ export default function Register() {
               </FormControl>
               <Stack spacing={10} pt={2}>
                 <Button
-                  onClick={handleSignUpWithEmailPassword}
+                type="submit"
                   loadingText="Submitting"
                   size="lg"
                   bg={"#ff3a00"}
@@ -152,17 +175,19 @@ export default function Register() {
                   _hover={{
                     bg: "#ff4f00",
                   }}
+                  isDisabled={isSubmitting}
                 >
-                  Sign up
+                  {isSubmitting?<span className="loader"></span>:'Sign up'}
                 </Button>
               </Stack>
               <Stack pt={6}>
-                {error && <p color="red">{error}</p>}
-                <Text align={"center"}>
-                  Already a user? <Link color={"#ff3a00"}>Login</Link>
+                {/* {error && <p color="red">{error}</p>} */}
+                <Text  align={"center"}>
+                  Already a user? <Link as={NavLink} to={'../login'} color={"#ff3a00"}>Login</Link>
                 </Text>
               </Stack>
             </Stack>
+            </form>
           </Box>
         </Stack>
       </Box>
@@ -176,7 +201,7 @@ export default function Register() {
           data-name="Layer 1"
           width={"100%"}
           viewBox="0 0 892.34963 579.10966"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
         >
           <title>fitness_stats</title>
           <path
