@@ -331,7 +331,12 @@ const NAV_ITEMS = [
     href: "/articles",
   },
   {
+   label: "Services",
+   href:  "/services"
+  },
+  {
     label: "Profile",
     href: "/profile",
   },
+  
 ];
