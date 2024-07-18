@@ -12,29 +12,36 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import Footer from "./Footer";
+import 'animate.css';
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
+import Swal from 'sweetalert2'
 import { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [error, setError] = useState("");
   const auth = getAuth();
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-
+  const submit_form = (e) =>{
+    e.preventDefault();
+    handleSignInWithEmailPassword();
+  }
   const handleSignInWithEmailPassword = () => {
+    setIsSubmitting(true)
     const email = emailRef.current?.value;
     const password = passwordRef.current?.value;
     console.log(email + " " + password);
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         console.log(res);
-        navigate("/articles");
+        navigate("/dashboard");
       })
-      .catch((error) => {
-        switch (error.code) {
+      .catch((e) => {
+        switch (e.code) {
           case "auth/user-not-found":
             setError("User not found.");
             break;
@@ -47,7 +54,13 @@ export default function Login() {
           default:
             setError("Sign-in failed. Please try again.");
         }
-        console.log(error);
+        //console.log(error);
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: 'Sign-in failed. Please try again.',
+        });
+        setIsSubmitting(false)
       });
   };
   return (
@@ -59,8 +72,9 @@ export default function Login() {
       wrap={"nowrap"}
       py={12}
       bg={useColorModeValue("gray.50", "gray.800")}
+      bgGradient={'linear-gradient(169deg, rgba(255,255,255,1) 39%, rgba(255,79,0,1) 100%);'}
     >
-      <Box maxW={"md"} display={{ base: "none", md: "block" }}>
+      <Box maxW={"md"}  display={{ base: "none", md: "block" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width={"100%"}
@@ -142,15 +156,17 @@ export default function Login() {
             bg={useColorModeValue("white", "gray.700")}
             boxShadow={"lg"}
             p={8}
+            className="animate__animated animate__tada"
           >
             <Stack spacing={4}>
+              <form onSubmit={(e)=>submit_form(e)}>
               <FormControl id="email">
                 <FormLabel>Email address</FormLabel>
-                <Input ref={emailRef} type="email" />
+                <Input ref={emailRef} type="email" required/>
               </FormControl>
-              <FormControl id="password">
+              <FormControl mt={3} mb={3} id="password">
                 <FormLabel>Password</FormLabel>
-                <Input ref={passwordRef} type="password" />
+                <Input ref={passwordRef} type="password" required/>
               </FormControl>
               <Stack spacing={10}>
                 <Stack
@@ -159,20 +175,23 @@ export default function Login() {
                   justify={"space-between"}
                 >
                   <Checkbox color={"ff4f00"}>Remember me</Checkbox>
-                  <Text color={"#ff3a00"}>Forgot password?</Text>
+                  <Text as={NavLink} fontWeight={'700'} to={'/forget_password'} color={"#ff3a00"}>Forgot password?</Text>
                 </Stack>
-                {error && <p color="red">{error}</p>}
+                {/* {error && <p color="red">{error}</p>} */}
                 <Button
-                  onClick={handleSignInWithEmailPassword}
+                  type="submit"
                   bg={"#ff3a00"}
                   color={"white"}
                   _hover={{
                     bg: "#ff4f00",
                   }}
+                  isDisabled={isSubmitting}
                 >
-                  Sign in
+                  {isSubmitting?<span className="loader"></span>:'Sign In'}
                 </Button>
+              
               </Stack>
+              </form>
             </Stack>
           </Box>
         </Stack>

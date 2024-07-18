@@ -7,6 +7,8 @@ import { AboutPage } from "../Pages/AboutPage";
 import { PagenotFound } from "../component/LandingPage/PagenotFound";
 import { ArticlesPage } from "../Pages/ArticlesPage";
 import { AuthRoute } from "../component/firebase/AuthRoute";
+import { Dashboard } from "../Pages/Dashboard";
+import { ForgetPasswordPage } from "../Pages/ForgetPasswordPage";
 
 export const AllRoutes = () => {
   return (
@@ -15,14 +17,9 @@ export const AllRoutes = () => {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route
-        path="/articles"
-        element={
-          <AuthRoute>
-            <ArticlesPage />
-          </AuthRoute>
-        }
-      />
+      <Route path="/dashboard" element={<AuthRoute><Dashboard /></AuthRoute>} />
+      <Route path="/articles" element={<ArticlesPage />}/>
+      <Route path="/forget_password" element={<ForgetPasswordPage />}/>
       <Route path="*" element={<PagenotFound />} />
     </Routes>
   );
