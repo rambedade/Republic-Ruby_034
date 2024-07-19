@@ -1,7 +1,6 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { collection, setDoc, doc, getDoc } from "firebase/firestore";
-import { firestoreInstance } from "../../config/firebase";
-import { authMain } from "../../config/firebase";
+import { firestoreInstance, authMain } from "../../config/firebase";
 import {
   Box,
   Container,
@@ -19,8 +18,8 @@ import {
 export const ExerciseForm = () => {
   const [selectedExercises, setSelectedExercises] = useState([]);
   const [goal, setGoal] = useState("");
-  const [loading, setLoading] = useState(true); // To manage loading state
-  const [error, setError] = useState(null); // To handle errors
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,16 +47,11 @@ export const ExerciseForm = () => {
   }, []);
 
   const handleExerciseChange = (exercise) => {
-    const currentIndex = selectedExercises.indexOf(exercise);
-    const newSelectedExercises = [...selectedExercises];
-
-    if (currentIndex === -1) {
-      newSelectedExercises.push(exercise);
-    } else {
-      newSelectedExercises.splice(currentIndex, 1);
-    }
-
-    setSelectedExercises(newSelectedExercises);
+    setSelectedExercises((prevSelected) =>
+      prevSelected.includes(exercise)
+        ? prevSelected.filter((ex) => ex !== exercise)
+        : [...prevSelected, exercise]
+    );
   };
 
   const handleSubmit = async (e) => {
@@ -73,7 +67,6 @@ export const ExerciseForm = () => {
         };
 
         const docRef = doc(firestoreInstance, "plan", user.uid);
-
         await setDoc(docRef, exerciseData);
 
         alert("Exercise routines updated successfully!");
@@ -87,21 +80,21 @@ export const ExerciseForm = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Box textAlign="center">Loading...</Box>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <Box textAlign="center" color="red.500">Error: {error}</Box>;
   }
 
   return (
-    <Box>
-      <Container maxW="xl" py={12}>
+    <Box py={12} bg={'#00020e'}>
+      <Container maxW="xl">
         <Stack spacing={8}>
-          <Heading as="h2" size="xl" textAlign="center">
+          <Heading as="h2" size="xl" textAlign="center" color="#FFF5F5">
             Plan Details
           </Heading>
-          <Box bg="white" p={6} borderRadius="lg">
+          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
             <Heading as="h3" size="md" mb={4}>
               Selected Exercise Routines
             </Heading>
@@ -111,13 +104,13 @@ export const ExerciseForm = () => {
               ))}
             </Stack>
           </Box>
-          <Box bg="white" p={6} borderRadius="lg">
+          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
             <Heading as="h3" size="md" mb={4}>
               Selected Goal
             </Heading>
             <Text>{goal}</Text>
           </Box>
-          <Box bg="white" p={6} borderRadius="lg">
+          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
             <Heading as="h2" size="xl" mb={4}>
               Update Plan
             </Heading>
@@ -126,40 +119,15 @@ export const ExerciseForm = () => {
                 <FormControl>
                   <FormLabel>Exercise Routines</FormLabel>
                   <Stack spacing={2}>
-                    <Checkbox
-                      isChecked={selectedExercises.includes("Swimming Workout")}
-                      onChange={() => handleExerciseChange("Swimming Workout")}
-                    >
-                      Swimming Workout
-                    </Checkbox>
-                    <Checkbox
-                      isChecked={selectedExercises.includes(
-                        "Interval Training"
-                      )}
-                      onChange={() => handleExerciseChange("Interval Training")}
-                    >
-                      Interval Training
-                    </Checkbox>
-                    <Checkbox
-                      isChecked={selectedExercises.includes("Yoga Session")}
-                      onChange={() => handleExerciseChange("Yoga Session")}
-                    >
-                      Yoga Session
-                    </Checkbox>
-                    <Checkbox
-                      isChecked={selectedExercises.includes(
-                        "Strength Training"
-                      )}
-                      onChange={() => handleExerciseChange("Strength Training")}
-                    >
-                      Strength Training
-                    </Checkbox>
-                    <Checkbox
-                      isChecked={selectedExercises.includes("Cardio Workout")}
-                      onChange={() => handleExerciseChange("Cardio Workout")}
-                    >
-                      Cardio Workout
-                    </Checkbox>
+                    {["Swimming Workout", "Interval Training", "Yoga Session", "Strength Training", "Cardio Workout"].map((exercise) => (
+                      <Checkbox
+                        key={exercise}
+                        isChecked={selectedExercises.includes(exercise)}
+                        onChange={() => handleExerciseChange(exercise)}
+                      >
+                        {exercise}
+                      </Checkbox>
+                    ))}
                   </Stack>
                 </FormControl>
                 <FormControl>
@@ -169,22 +137,18 @@ export const ExerciseForm = () => {
                     onChange={(e) => setGoal(e.target.value)}
                   >
                     <option value="">Select Goal</option>
-                    <option value="Weight Loss">Weight Loss</option>
-                    <option value="Muscle Gain">Muscle Gain</option>
-                    <option value="General Fitness">General Fitness</option>
-                    <option value="Endurance Improvement">
-                      Endurance Improvement
-                    </option>
-                    <option value="Stress Relief and Mental Health">
-                      Stress Relief and Mental Health
-                    </option>
+                    {["Weight Loss", "Muscle Gain", "General Fitness", "Endurance Improvement", "Stress Relief and Mental Health"].map((goalOption) => (
+                      <option key={goalOption} value={goalOption}>
+                        {goalOption}
+                      </option>
+                    ))}
                   </Select>
                 </FormControl>
                 <Button
                   type="submit"
                   px={6}
-                  colorScheme={"orange"}
-                  bg={"#ff3a00"}
+                  colorScheme="orange"
+                  bg="#ff3a00"
                   _hover={{ bg: "#ff3b10" }}
                 >
                   Update Plan

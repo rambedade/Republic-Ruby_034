@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import { getDoc, doc, getDocs, collection } from "firebase/firestore";
-import { firestoreInstance } from "../config/firebase";
-import { authMain } from "../config/firebase";
+import React, { useEffect, useState } from "react";
+import { getDoc, doc } from "firebase/firestore";
+import { firestoreInstance, authMain } from "../config/firebase";
 import { ExerciseForm } from "../component/ProfileInfo/ExerciseForm";
+import { Box, Container, Stack, Heading, Text, Spinner } from "@chakra-ui/react";
 
 export const ProfilePage = () => {
   const [userData, setUserData] = useState(null);
@@ -11,18 +11,11 @@ export const ProfilePage = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       const user = authMain.currentUser;
-      console.log("Current user:", user);
-
       if (user) {
-        console.log("Current user ID:", user.uid);
         const docRef = doc(firestoreInstance, "users", user.uid);
-
         try {
           const userDoc = await getDoc(docRef);
-          console.log("User document data:", userDoc);
-
           if (userDoc.exists()) {
-            console.log("User document data:", userDoc.data());
             setUserData(userDoc.data());
           } else {
             console.log("No such document!");
@@ -33,26 +26,46 @@ export const ProfilePage = () => {
       } else {
         console.log("No user is currently logged in.");
       }
-
       setLoading(false);
     };
     fetchUserData();
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <Box textAlign="center" py={10}>
+        <Spinner size="xl" />
+        <Text mt={4}>Loading...</Text>
+      </Box>
+    );
   }
 
   if (!userData) {
-    return <div>No user data found.</div>;
+    return (
+      <Box textAlign="center" py={10}>
+        <Text>No user data found.</Text>
+      </Box>
+    );
   }
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <p>Name: {`${userData.firstName} ${userData.lastName}`}</p>
-      <p>Email: {userData.email}</p>
-      <ExerciseForm />
-    </div>
+    <Box py={10} bg={'#00020e'}>
+      <Container maxW="xl">
+        <Stack spacing={8}>
+          <Heading as="h1" size="xl" textAlign="center" color="#FFF5F5">
+            Profile
+          </Heading>
+          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
+            <Text fontSize="lg">
+              <strong>Name:</strong> {`${userData.firstName} ${userData.lastName}`}
+            </Text>
+            <Text fontSize="lg" mt={2}>
+              <strong>Email:</strong> {userData.email}
+            </Text>
+          </Box>
+          <ExerciseForm />
+        </Stack>
+      </Container>
+    </Box>
   );
 };
