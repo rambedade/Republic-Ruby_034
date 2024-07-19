@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
-import { firestoreInstance } from "../../config/firebase";
-import { authMain } from "../../config/firebase";
+// import { firestoreInstance } from "../../config/firebase";
+// import { authMain } from "../../config/firebase";
+import { firestoreInstance,authMain } from "../config/firebase";
 import {
   Box,
   Container,
