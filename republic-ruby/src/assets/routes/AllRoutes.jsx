@@ -12,6 +12,9 @@ import { Dashboard } from "../Pages/Dashboard";
 import { ForgetPasswordPage } from "../Pages/ForgetPasswordPage";
 import BlogDetail from "../component/Blogs/BlogDetail";
 import { ServicePage } from "../Pages/ServicePage";
+// import { NutritionManagement } from "../Pages/NutritionManagement";
+// import NutritionalAnalysis from "../Pages/NutritionalAnalysis";
+
 
 export const AllRoutes = () => {
   return (
@@ -23,6 +26,8 @@ export const AllRoutes = () => {
       <Route path="/blog/:blogId" element={<BlogDetail />} />
       <Route path="/services" element={<ServicePage />} />
       <Route path="/about" element={<AboutPage />} />
+      {/* <Route path="/nutrition-management" element={<NutritionManagement />} />
+      <Route path="/nutritional-analysis" element={<NutritionalAnalysis />} /> */}
       <Route
         path="/dashboard"
         element={
