@@ -12,8 +12,10 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
+    "@chatscope/chat-ui-kit-react": "^2.0.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@google/generative-ai": "^0.15.0",
     "animate.css": "^4.1.1",
     "firebase": "^10.12.3",
     "framer-motion": "^11.3.7",

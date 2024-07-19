@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { getDoc, doc } from "firebase/firestore";
 import { firestoreInstance, authMain } from "../config/firebase";
 import { ExerciseForm } from "../component/ProfileInfo/ExerciseForm";
-import { Box, Container, Stack, Heading, Text, Spinner } from "@chakra-ui/react";
+import {
+  Box,
+  Container,
+  Stack,
+  Heading,
+  Text,
+  Spinner,
+} from "@chakra-ui/react";
 
 export const ProfilePage = () => {
   const [userData, setUserData] = useState(null);
@@ -49,7 +56,7 @@ export const ProfilePage = () => {
   }
 
   return (
-    <Box py={10} bg={'#00020e'}>
+    <Box py={10} bg={"#00020e"}>
       <Container maxW="xl">
         <Stack spacing={8}>
           <Heading as="h1" size="xl" textAlign="center" color="#FFF5F5">
@@ -57,7 +64,8 @@ export const ProfilePage = () => {
           </Heading>
           <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
             <Text fontSize="lg">
-              <strong>Name:</strong> {`${userData.firstName} ${userData.lastName}`}
+              <strong>Name:</strong>{" "}
+              {`${userData.firstName} ${userData.lastName}`}
             </Text>
             <Text fontSize="lg" mt={2}>
               <strong>Email:</strong> {userData.email}
