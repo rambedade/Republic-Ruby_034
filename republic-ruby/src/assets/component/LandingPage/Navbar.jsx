@@ -1,5 +1,5 @@
 "use client";
-
+import logo from '../../../../public/logo.png'
 import {
   Box,
   Flex,
@@ -80,7 +80,7 @@ export default function Navbar() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <Image w={"150px"} src="logo.png" alt="" />
+            <Image w={"150px"} src={logo} alt="" />
           </Text>
 
           <Flex display={{ base: "none", md: "flex" }} ml={10}>
