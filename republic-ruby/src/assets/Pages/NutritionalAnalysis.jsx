@@ -1,8 +1,10 @@
-// src/components/NutritionalAnalysis.jsx
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
-import { firestoreInstance } from "../../config/firebase";
-import { authMain } from "../../config/firebase";
+// import { firestoreInstance } from "../../config/firebase";
+// import { authMain } from "../../config/firebase";
+import { firestoreInstance ,authMain} from "../config/firebase";
+
+
 import {
   Box,
   Container,
@@ -11,7 +13,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 
-const NutritionalAnalysis = () => {
+export const NutritionalAnalysis = () => {
   const [mealLogs, setMealLogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -92,4 +94,4 @@ const NutritionalAnalysis = () => {
   );
 };
 
-export default NutritionalAnalysis;
+
