@@ -33,7 +33,6 @@ export const ProfileDetails = () => {
   if (loading) {
     return <Box textAlign="center">Loading...</Box>;
   }
-
   if (error) {
     return (
       <Box textAlign="center" color="red.500">
