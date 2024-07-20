@@ -31,7 +31,6 @@ export const GoogleAI = () => {
       const result = await model.generateContent(prompt);
       const response = result.response;
       const text = response.text();
-
       setChatHistory((prev) => [
         ...prev,
         { type: "user", message: messageText },
@@ -61,7 +60,7 @@ export const GoogleAI = () => {
           zIndex: 1000,
           padding: "10px",
           borderRadius: "50%",
-          backgroundColor: "#007bff",
+          backgroundColor: "#ff4f00",
           color: "white",
           border: "none",
           cursor: "pointer",
