@@ -6,7 +6,7 @@ export const blogPosts = [
       tags: ['Health', 'Exercise'],
       author: "Rameshwar",
       date: new Date('2023-01-10'),
-      imageUrl: 'https://miro.medium.com/v2/resize:fit:1000/1*GQvm8q28qkUL-glaJmbE5g.jpeg',
+      imageUrl: 'https://imagevars.gulfnews.com/2023/06/06/Exercise_18891295fcb_medium.jpg',
       details: `
         <p>Exercise is essential for maintaining physical fitness and overall health. It helps improve cardiovascular health, boost mental health, and promote weight management. Engaging in regular physical activity can reduce the risk of chronic diseases such as heart disease, stroke, diabetes, and some cancers. It also strengthens muscles and bones, improves flexibility, and enhances overall physical performance.</p>
         <p>Moreover, exercise has mental health benefits. It can reduce symptoms of depression and anxiety, improve mood, and enhance cognitive function. Regular exercise can also improve sleep quality, which is vital for overall well-being. Whether it's a brisk walk, a run, or a session at the gym, incorporating physical activity into your daily routine can lead to a healthier and happier life.</p>
@@ -19,7 +19,7 @@ export const blogPosts = [
       tags: ['Health', 'General Fitness'],
       author: "Pawan",
       date: new Date('2023-02-15'),
-      imageUrl: 'https://assets-global.website-files.com/5ca5fe687e34be0992df1fbe/604b41c0414f577f8fb61ebf_NYAMBA%20PILATES%20MAT%20M%20BORDEAUX%20-%20001%20---%20Expires%20on%2010-02-2025-min.jpg',
+      imageUrl: 'https://www.satyabhamahospital.in/wp-content/uploads/2024/02/Benefits-of-Physical-Activity-Satyabhama-Hospital.png',
       details: `
         <p>Regular exercise offers numerous benefits, including improved heart health, stronger muscles, better mood, and increased energy levels. It's a vital component of a healthy lifestyle. By engaging in physical activity, you can reduce the risk of developing cardiovascular diseases, as exercise helps to maintain healthy blood pressure, cholesterol levels, and blood sugar levels.</p>
         <p>In addition to physical health benefits, regular exercise can significantly improve mental health. Physical activity stimulates the release of endorphins, which are natural mood lifters. It can help alleviate stress, reduce feelings of anxiety, and combat depression. Exercise also enhances brain function, improving memory, cognitive abilities, and overall mental sharpness.</p>
@@ -33,7 +33,7 @@ export const blogPosts = [
       tags: ['Health', 'Muscle Gain'],
       author: "Everus",
       date: new Date('2023-03-20'),
-      imageUrl: 'https://fitspire.online/cdn/shop/articles/Muscle_Building_Tips_800x.jpg?v=1671713513',
+      imageUrl: 'https://www.verywellfit.com/thmb/eh71u2ImiMFCweIOqhugBMlTpMc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/are-you-eating-for-muscle-3121316-FINAL-95cb996f8986480386447c1a61efb4ee.png',
       details: `
         <p>To gain muscle, it's important to focus on strength training exercises, consume a protein-rich diet, and allow for adequate rest and recovery. Consistency and proper form are key. Strength training exercises such as weightlifting, resistance band exercises, and bodyweight exercises can help build muscle mass by creating microtears in the muscle fibers, which then repair and grow stronger.</p>
         <p>A protein-rich diet is essential for muscle growth, as protein provides the necessary building blocks (amino acids) for muscle repair and growth. Aim to include a variety of protein sources in your diet, such as lean meats, fish, eggs, dairy products, legumes, and plant-based proteins. Additionally, ensure you are consuming enough calories to support muscle growth, as a calorie deficit can hinder your progress.</p>
@@ -48,7 +48,7 @@ export const blogPosts = [
         tags: ['Muscle Gain', 'Nutrition'],
         author: "Everus",
         date: new Date('2023-03-25'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Muscle_Building_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://ars.els-cdn.com/content/image/1-s2.0-S0261561422002825-gr6.jpg',
         details: `
           <p>Muscle gain requires a multifaceted approach, and nutrition is at the heart of it. To support muscle growth, your body needs the right nutrients to repair and build muscle fibers. A diet rich in protein, carbohydrates, fats, vitamins, and minerals is essential for optimal muscle gain.</p>
           <p>Protein is the most important nutrient for muscle growth. It provides the amino acids necessary for repairing and building muscle tissue. Aim to include a variety of protein sources in your diet, such as lean meats, fish, eggs, dairy products, legumes, and plant-based proteins. Consuming protein throughout the day, especially after workouts, can maximize muscle protein synthesis.</p>
@@ -64,7 +64,7 @@ export const blogPosts = [
         tags: ['Muscle Gain', 'Workout'],
         author: "Everus",
         date: new Date('2023-04-05'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Muscle_Building_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2018/01/dumbbell-curl-standing-1109.jpg?quality=86&strip=all',
         details: `
           <p>To gain muscle, a strategic workout plan is crucial. It involves selecting the right exercises, using proper form, and progressively challenging your muscles to grow. Strength training exercises are the foundation of any muscle-building program.</p>
           <p>Compound exercises like squats, deadlifts, bench presses, and pull-ups engage multiple muscle groups and promote overall strength and muscle growth. These exercises should form the core of your workout routine. Incorporating isolation exercises like bicep curls and tricep extensions can help target specific muscles for balanced development.</p>
@@ -81,7 +81,7 @@ export const blogPosts = [
         tags: ['Muscle Gain', 'Recovery'],
         author: "Everus",
         date: new Date('2023-04-15'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Muscle_Building_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://miro.medium.com/v2/resize:fit:1400/1*YSleQXwWchsz_eJnKJXP2A.png',
         details: `
           <p>Recovery plays a vital role in muscle gain. While workouts create the stimulus for muscle growth, it's during rest and recovery that muscles actually repair and grow stronger. Incorporating adequate recovery into your fitness routine is essential for achieving your muscle gain goals.</p>
           <p>Sleep is one of the most important factors in recovery. During deep sleep, the body releases growth hormones that aid in muscle repair and growth. Aim for 7-9 hours of quality sleep per night to support optimal recovery.</p>
@@ -99,7 +99,7 @@ export const blogPosts = [
         tags: ['Muscle Gain', 'Mistakes'],
         author: "Everus",
         date: new Date('2023-04-25'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Muscle_Building_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://goqii.com/blog/wp-content/uploads/common-muscle-building-mistakes-to-avoid.jpg',
         details: `
           <p>While many focus on the right strategies for muscle gain, it's equally important to avoid common mistakes that can impede progress. Understanding these pitfalls can help you achieve better results and prevent setbacks.</p>
           <p>One of the most common mistakes is neglecting proper form. Lifting weights with incorrect technique can lead to injuries and reduce the effectiveness of the exercise. Focus on mastering the form of each exercise, even if it means lifting lighter weights initially.</p>
@@ -118,7 +118,7 @@ export const blogPosts = [
         tags: ['Weight Loss', 'Healthy Eating'],
         author: "Everus",
         date: new Date('2023-03-20'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Weight_Loss_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://sa1s3optim.patientpop.com/assets/images/provider/photos/1797468.jpg',
         details: `
           <p>Effective weight loss requires a holistic approach that includes dietary changes, physical activity, and lifestyle adjustments. Setting realistic and achievable goals is the first step in any weight loss journey. Avoid drastic diets or extreme calorie restrictions that are unsustainable in the long term.</p>
           <p>A balanced diet is crucial for weight loss. Focus on consuming whole foods like fruits, vegetables, lean proteins, and whole grains. Reducing the intake of processed foods, sugary snacks, and high-fat items can significantly impact your weight loss efforts. Portion control is also important—pay attention to serving sizes and avoid overeating.</p>
@@ -134,7 +134,7 @@ export const blogPosts = [
         tags: ['Weight Loss', 'Exercise'],
         author: "Everus",
         date: new Date('2023-04-05'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Weight_Loss_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2023/05/weight_loss_exercises.jpeg.jpg',
         details: `
           <p>Exercise is an integral part of a successful weight loss strategy. It not only helps in burning calories but also improves overall physical fitness and well-being. A well-rounded exercise regimen should include cardiovascular activities, strength training, and flexibility exercises.</p>
           <p>Cardiovascular exercises, such as running, swimming, or cycling, increase heart rate and burn calories effectively. Aim for at least 150 minutes of moderate-intensity or 75 minutes of high-intensity cardio per week. These activities help in creating a calorie deficit, which is essential for weight loss.</p>
@@ -150,7 +150,7 @@ export const blogPosts = [
         tags: ['Weight Loss', 'Healthy Eating'],
         author: "Everus",
         date: new Date('2023-04-15'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Weight_Loss_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://www.eatthis.com/wp-content/uploads/sites/4/2020/07/woman-eating-yogurt.jpg?quality=82&strip=all',
         details: `
           <p>Healthy eating habits are essential for achieving and maintaining weight loss. Incorporating balanced meals, practicing mindful eating, and making nutritious food choices can support your weight loss journey.</p>
           <p>A balanced meal includes a combination of lean proteins, whole grains, healthy fats, and plenty of fruits and vegetables. This combination ensures that you receive essential nutrients while managing calorie intake. Focus on nutrient-dense foods that provide energy and promote satiety.</p>
@@ -164,9 +164,9 @@ export const blogPosts = [
         title: "Overcoming Plateaus in Weight Loss",
         content: "Weight loss plateaus are common, but they can be frustrating. Understanding the reasons behind plateaus and implementing strategies to overcome them can help you continue progressing toward your goals.",
         tags: ['Weight Loss', 'Plateaus'],
-        author: "Everus",
+        author: "Deepak",
         date: new Date('2023-04-25'),
-        imageUrl: 'https://fitspire.online/cdn/shop/articles/Weight_Loss_Tips_800x.jpg?v=1671713513',
+        imageUrl: 'https://media.licdn.com/dms/image/D4D12AQHWGsGP2xo6hA/article-cover_image-shrink_720_1280/0/1681799243388?e=2147483647&v=beta&t=2B5QmzH88EDymQkeN9WQfz2CDM-I0DcfWxBdq8J41cg',
         details: `
           <p>Experiencing a weight loss plateau is a common part of the journey. A plateau occurs when your weight loss stalls despite continued efforts. Understanding why plateaus happen and how to address them can help you get back on track.</p>
           <p>Plateaus can occur due to several reasons, including metabolic adaptation, changes in muscle mass, or simply hitting a natural weight loss limit. As you lose weight, your metabolism may slow down, requiring adjustments to your diet and exercise routine.</p>
@@ -184,7 +184,7 @@ export const blogPosts = [
           tags: ['General Fitness'],
           author: "Everus",
           date: new Date('2023-05-01'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/General_Fitness_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://habibishomemedical.com/cdn/shop/articles/IMG_1081_1200x.jpg?v=1684445204',
           details: `
             <p>Achieving general fitness requires a balanced approach that integrates various aspects of health and wellness. This includes cardiovascular exercises, strength training, and flexibility exercises, all of which contribute to overall physical health.</p>
             <p>Cardiovascular exercises, such as running, swimming, or cycling, are essential for improving heart health and endurance. Aim for at least 150 minutes of moderate-intensity or 75 minutes of high-intensity cardio each week. These activities help increase stamina and support weight management.</p>
@@ -200,7 +200,7 @@ export const blogPosts = [
           tags: ['General Fitness'],
           author: "Everus",
           date: new Date('2023-05-10'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Cardio_Fitness_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://totalwellnessandbariatrics.com/wp-content/uploads/35847809_m.jpg',
           details: `
             <p>Cardiovascular exercise plays a vital role in maintaining general fitness. It strengthens the heart, increases lung capacity, and enhances overall endurance. Engaging in regular cardio workouts can also support weight management and improve mental well-being.</p>
             <p>There are many types of cardiovascular exercises to choose from, including running, swimming, cycling, and rowing. Mixing up different activities can keep workouts interesting and prevent boredom. Aim for at least 150 minutes of moderate-intensity or 75 minutes of high-intensity cardio each week.</p>
@@ -216,7 +216,7 @@ export const blogPosts = [
           tags: ['General Fitness'],
           author: "Everus",
           date: new Date('2023-05-15'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Strength_Training_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://images.ctfassets.net/0k812o62ndtw/KvroPtTM2awVauxku2ypf/da3a83b54d54f1dd96fb5ff059a66919/BenefitsOfStrengthTrainingForWomencdc853cb74a233646df40500d0cf977b.jpg',
           details: `
             <p>Strength training is a key component of overall fitness. It involves lifting weights or using resistance to build muscle strength, improve metabolism, and enhance functional movement. Incorporating strength training into your fitness routine can lead to improved muscle tone, increased bone density, and better overall health.</p>
             <p>To achieve balanced results, include exercises that target all major muscle groups. Compound exercises, such as squats, deadlifts, bench presses, and rows, are effective for working multiple muscles at once and building overall strength.</p>
@@ -232,7 +232,7 @@ export const blogPosts = [
           tags: ['General Fitness'],
           author: "Everus",
           date: new Date('2023-05-20'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Flexibility_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.specsavers.co.za/images/cmsimages/images/Blog/flexibility-main.jpg',
           details: `
             <p>Flexibility and mobility are crucial aspects of general fitness that often receive less attention. Incorporating stretching, yoga, and mobility drills into your routine can enhance overall movement quality, reduce the risk of injury, and support recovery.</p>
             <p>Stretching exercises help maintain and improve flexibility by lengthening muscles and increasing joint range of motion. Perform static stretches after workouts or as a separate session to enhance flexibility and prevent muscle tightness.</p>
@@ -248,7 +248,7 @@ export const blogPosts = [
           tags: ['General Fitness'],
           author: "Everus",
           date: new Date('2023-05-25'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Lifestyle_Fitness_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://cdn.broadsheet.com.au/cache/45/1e/451e376bb2f3ce99706659d907ffcffc.webp',
           details: `
             <p>Achieving and maintaining general fitness involves more than just exercise; it requires integrating physical activity into daily routines and making healthy lifestyle choices. A holistic approach to fitness includes focusing on regular exercise, balanced nutrition, and effective stress management.</p>
             <p>Incorporate physical activity into your daily routine by choosing activities you enjoy and can sustain. Whether it's walking, biking, or taking fitness classes, finding enjoyable ways to stay active increases adherence and overall well-being.</p>
@@ -266,7 +266,7 @@ export const blogPosts = [
           tags: ['Endurance Improvement'],
           author: "Everus",
           date: new Date('2023-05-01'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Endurance_Improvement_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.mensjournal.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_640/MTk2MTM2MDgzNDkxNDY0NzA5/bicepscurl.jpg',
           details: `
             <p>Improving endurance is essential for athletes and fitness enthusiasts looking to enhance their performance and overall stamina. This process involves a combination of targeted exercise strategies and proper nutrition.</p>
             <p>Interval training, which involves alternating periods of high-intensity exercise with lower-intensity recovery periods, is highly effective for building endurance. Incorporate interval training into your routine to improve cardiovascular fitness and increase stamina.</p>
@@ -282,7 +282,7 @@ export const blogPosts = [
           tags: ['Endurance Improvement'],
           author: "Everus",
           date: new Date('2023-05-05'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/HIIT_Endurance_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://i0.wp.com/www.muscleandfitness.com/wp-content/uploads/2017/09/Renegade-pushup-dumbbells-11090.jpg?quality=86&strip=all',
           details: `
             <p>High-Intensity Interval Training (HIIT) is a powerful tool for enhancing endurance and cardiovascular fitness. This training method involves alternating between short bursts of intense exercise and periods of lower-intensity recovery.</p>
             <p>HIIT workouts can be adapted to various types of exercise, including running, cycling, or bodyweight exercises. For example, a typical HIIT session might include 30 seconds of sprinting followed by 1 minute of walking or jogging. Repeat this cycle for a set duration to maximize endurance gains.</p>
@@ -298,7 +298,7 @@ export const blogPosts = [
           tags: ['Endurance Improvement'],
           author: "Everus",
           date: new Date('2023-05-10'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Long_Distance_Endurance_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://muscleandhealth.com/wp-content/uploads/2022/11/HEADER_A_Beginners_Guide_to_Long-Distance_Running.jpg',
           details: `
             <p>Long-distance running is a proven method for building endurance and improving overall stamina. To enhance performance and reduce the risk of injury, it’s important to focus on gradual mileage increases, proper pacing, and recovery strategies.</p>
             <p>Start by gradually increasing your running distance to allow your body to adapt to longer durations of exercise. Follow a structured training plan that includes long runs, easy runs, and rest days. Gradual increases in mileage help build endurance without overwhelming your body.</p>
@@ -314,7 +314,7 @@ export const blogPosts = [
           tags: ['Endurance Improvement'],
           author: "Everus",
           date: new Date('2023-05-15'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Nutrition_Endurance_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://images.ctfassets.net/qw8ps43tg2ux/1ac3CE0DeOGjkSy7tkWEUR/52d165d1a044681e893fd12c625244a0/issa-nutrition-endurance.jpg',
           details: `
             <p>Nutrition plays a critical role in enhancing endurance and supporting overall performance. A balanced diet that includes carbohydrates, proteins, and fats, along with proper hydration, is essential for optimal endurance and recovery.</p>
             <p>Carbohydrates are the primary source of energy for endurance activities. Focus on consuming complex carbohydrates, such as whole grains, fruits, and vegetables, to provide sustained energy throughout your workouts. Eating carbohydrates before and after exercise can help replenish glycogen stores and improve performance.</p>
@@ -331,7 +331,7 @@ export const blogPosts = [
           tags: ['Endurance Improvement'],
           author: "Everus",
           date: new Date('2023-05-20'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Recovery_Endurance_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://wpassets.trainingpeaks.com/wp-content/uploads/2017/01/13061305/09247-the-best-recovery-practices-for-endurance-athletes-700x394.jpgwidth700height394ext.jpg',
           details: `
             <p>Recovery techniques are crucial for enhancing endurance and preventing overtraining. Implementing effective recovery strategies helps the body repair and adapt to the demands of exercise, leading to improved performance and reduced risk of injury.</p>
             <p>Proper rest is essential for recovery. Ensure you get adequate sleep each night to support muscle repair and overall health. Incorporate rest days into your training routine to allow your body to recover and prevent burnout.</p>
@@ -349,7 +349,7 @@ export const blogPosts = [
           tags: ['Stress Relief and Mental Health'],
           author: "Everus",
           date: new Date('2023-06-01'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Stress_Relief_Exercise_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://info.totalwellnesshealth.com/hubfs/health-beautiful-female-body-peace_1139-721.jpg',
           details: `
             <p>Physical activity is a highly effective way to manage stress and support mental health. Engaging in regular exercise can help lower stress levels, improve mood, and enhance overall well-being.</p>
             <p>Exercise stimulates the release of endorphins, which are natural mood enhancers. These "feel-good" hormones can help alleviate symptoms of stress and anxiety. Aim for at least 30 minutes of moderate-intensity exercise most days of the week to experience these benefits.</p>
@@ -365,7 +365,7 @@ export const blogPosts = [
           tags: ['Stress Relief and Mental Health'],
           author: "Everus",
           date: new Date('2023-06-05'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Mindfulness_Meditation_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.verywellmind.com/thmb/lmjACRUlHuZcHijdfo5dYplWQro=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-539661087-58d2e5e65f9b5846830df9aa.jpg',
           details: `
             <p>Mindfulness and meditation are powerful practices for managing stress and enhancing mental health. By incorporating these techniques into your daily routine, you can improve relaxation, reduce anxiety, and cultivate a greater sense of well-being.</p>
             <p>Mindfulness involves paying attention to the present moment without judgment. Practicing mindfulness can help you become more aware of your thoughts and feelings, leading to better stress management. Techniques such as mindful breathing, body scans, and mindful eating can be incorporated into daily life.</p>
@@ -381,7 +381,7 @@ export const blogPosts = [
           tags: ['Stress Relief and Mental Health'],
           author: "Everus",
           date: new Date('2023-06-10'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Yoga_Mental_Health_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.ekhartyoga.com/media/image/articles/6-stress-relieving-pose.jpg',
           details: `
             <p>Yoga is a holistic practice that can significantly benefit mental health and stress management. By incorporating yoga poses, breathing techniques, and relaxation practices into your routine, you can enhance overall well-being and reduce anxiety.</p>
             <p>Yoga poses, or asanas, promote physical flexibility and strength while also supporting mental relaxation. Focus on poses that encourage deep breathing and mindful movement, such as child’s pose, downward-facing dog, and cat-cow stretches.</p>
@@ -397,7 +397,7 @@ export const blogPosts = [
           tags: ['Stress Relief and Mental Health'],
           author: "Everus",
           date: new Date('2023-06-15'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Sleep_Stress_Management_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.bannerhealth.com/healthcareblog/-/media/images/project/healthcareblog/hero-images/2019/02/sleep-and-stress.ashx',
           details: `
             <p>Adequate sleep is essential for managing stress and maintaining overall mental health. Prioritizing good sleep hygiene practices can help improve sleep quality, reduce stress levels, and enhance overall well-being.</p>
             <p>Establish a consistent sleep schedule by going to bed and waking up at the same time each day. Creating a regular sleep routine helps regulate your body's internal clock and promotes better sleep quality.</p>
@@ -414,7 +414,7 @@ export const blogPosts = [
           tags: ['Stress Relief and Mental Health'],
           author: "Everus",
           date: new Date('2023-06-20'),
-          imageUrl: 'https://fitspire.online/cdn/shop/articles/Journaling_Stress_Tips_800x.jpg?v=1671713513',
+          imageUrl: 'https://www.spbh.org/wp-content/uploads/2018/04/07_24_18-4.png',
           details: `
             <p>Journaling is an effective tool for managing stress and achieving mental clarity. By using journaling techniques to process emotions, set goals, and reflect on daily experiences, you can enhance mental well-being and reduce stress levels.</p>
             <p>Start by dedicating a few minutes each day to journaling. Write about your thoughts, feelings, and any stressors you may be experiencing. This practice can help you gain insight into your emotions and identify patterns that may be contributing to stress.</p>
