@@ -81,8 +81,8 @@ export const FoodDetails = () => {
     }
   };
 
-  const bg = useColorModeValue("gray.100", "gray.700");
-  const boxBg = useColorModeValue("white", "gray.800");
+  const bg = useColorModeValue("white", "gray.700");
+  const boxBg = useColorModeValue("purple.100", "purple.100");
 
   return (
     <Container maxW="container.md" bg={bg} p={6} borderRadius="lg" shadow="lg">

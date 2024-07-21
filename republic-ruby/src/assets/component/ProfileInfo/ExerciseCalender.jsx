@@ -177,7 +177,7 @@ export const ExerciseCalendar = () => {
           </Alert>
         )}
         <VStack align="stretch" spacing={6}>
-          <Box bg={boxBg} p={4} borderRadius="lg" boxShadow="md">
+          <Box  p={4} borderRadius="lg" boxShadow="md" bg="purple.100">
             <Heading as="h3" size="lg" mb={2}>
               Summary
             </Heading>
@@ -186,7 +186,7 @@ export const ExerciseCalendar = () => {
               Current Streak: {streak} day{streak > 1 ? "s" : ""}
             </Text>
           </Box>
-          <Box bg={boxBg} p={4} borderRadius="lg" boxShadow="md">
+          <Box bg="purple.100" p={4} borderRadius="lg" boxShadow="md">
             <Heading as="h3" size="lg" mb={2}>
               Goal Suggestion
             </Heading>

@@ -49,24 +49,26 @@ export const ProfileDetails = () => {
   }
 
   return (
-    <Box 
-      bg="#0f678e" 
-      p={6} 
-      borderRadius="lg" 
-      boxShadow="md" 
-      maxW="400px" 
-      mx="auto" 
-      color="white"
-    >
-      <Heading as="h2" size="lg" textAlign="center" mb={4}>
-        Profile Details
-      </Heading>
-      <Text textAlign="center" fontSize="lg">
-        <strong>Name:</strong> {`${profile.firstName} ${profile.lastName}`}
-      </Text>
-      <Text textAlign="center" fontSize="lg">
-        <strong>Email:</strong> {profile.email}
-      </Text>
-    </Box>
+    <Box
+    bg="#a493ef"
+    p={6}
+    borderRadius="lg"
+    boxShadow="md"
+    maxW="400px"
+    mx="auto"
+    color="black"
+    textAlign="center" // Center-aligns all text within the box
+  >
+    <Heading as="h2" size="lg" mb={4}>
+      Profile Details
+    </Heading>
+    <Text fontSize="lg" mb={2}>
+      <strong>Name:</strong> {`${profile.firstName} ${profile.lastName}`}
+    </Text>
+    <Text fontSize="lg">
+      <strong>Email:</strong> {profile.email}
+    </Text>
+  </Box>
+  
   );
 };

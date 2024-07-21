@@ -56,13 +56,13 @@ export const SelectedPlan = () => {
     <Box bg="gray.50" p={6} borderRadius="lg" boxShadow="lg" maxW="md" mx="auto" my={8}>
       <Stack spacing={6} textAlign="center">
         <Box>
-          <Heading as="h3" size="lg" mb={4} display="flex" justifyContent="center" alignItems="center" color="teal.500">
+          <Heading as="h3" size="lg" mb={4} display="flex" justifyContent="center" alignItems="center" color="purple.500">
             <Icon as={FaDumbbell} w={6} h={6} mr={2} />
             Selected Exercise Routines
           </Heading>
           <Stack spacing={3}>
             {selectedExercises.map((exercise, index) => (
-              <Text key={index} fontSize="lg" color="gray.700" bg="teal.100" p={2} borderRadius="md">
+              <Text key={index} fontSize="lg" color="gray.700" bg="purple.100" p={2} borderRadius="md">
                 {exercise}
               </Text>
             ))}

@@ -57,7 +57,7 @@ export const ProfilePage = () => {
       <Container maxW="container.lg">
         <Stack spacing={8}>
           <Box
-            bg={useColorModeValue("white", "gray.700")}
+            bg={useColorModeValue("yellow.50", "gray.800")}
             p={6}
             borderRadius="lg"
             boxShadow="md"
@@ -70,12 +70,17 @@ export const ProfilePage = () => {
             >
               <Box
                 flex="1"
-                minW="300px"
+                minW="400px"
+                minH='500px'
                 mb={{ base: 4, md: 0 }}
-                bg={useColorModeValue("green.50", "gray.800")}
+                // bg={useColorModeValue("green.50", "gray.800")}
+                bg={useColorModeValue("yellow.50", "gray.800")}
                 p={4}
                 borderRadius="lg"
                 boxShadow="md"
+                display='flex'
+                placeItems='center'
+
               >
                 <ProfileDetails />
               </Box>
@@ -93,7 +98,7 @@ export const ProfilePage = () => {
           </Box>
 
           <Box
-            bg={useColorModeValue("blue.50", "gray.700")}
+            bg={useColorModeValue("yellow.50", "gray.800")}
             p={6}
             borderRadius="lg"
             boxShadow="md"
@@ -102,12 +107,12 @@ export const ProfilePage = () => {
           </Box>
 
           <Box
-            bg={useColorModeValue("white", "gray.700")}
+            bg={useColorModeValue("yellow.50", "gray.800")}
             p={6}
             borderRadius="lg"
             boxShadow="md"
           >
-            <Heading as="h2" size="xl" textAlign="center" mb={4} color="teal.500">
+            <Heading as="h2" size="xl" textAlign="center" mb={4} color="black">
               Food Diary
             </Heading>
             <Divider mb={4} />
@@ -115,7 +120,7 @@ export const ProfilePage = () => {
           </Box>
 
           <Box
-            bg={useColorModeValue("purple.50", "gray.700")}
+            bg={useColorModeValue("yellow.50", "gray.800")}
             p={6}
             borderRadius="lg"
             boxShadow="md"
