@@ -11,8 +11,8 @@ import { Dashboard } from "../Pages/Dashboard";
 import { ForgetPasswordPage } from "../Pages/ForgetPasswordPage";
 import BlogDetail from "../component/Blogs/BlogDetail";
 import { ServicePage } from "../Pages/ServicePage";
-import { NutritionalAnalysis } from "../Pages/NutritionalAnalysis";
-import { NutritionManagement } from "../Pages/NutritionManagement";
+// import { NutritionalAnalysis } from "../Pages/NutritionalAnalysis";
+// import { NutritionManagement } from "../Pages/NutritionManagement";
 import { useAuth } from "../config/useAuth";
 import { Center, Spinner } from "@chakra-ui/react";
 import { AdminPanel } from "../Pages/AdminPanel";
@@ -51,8 +51,8 @@ export const AllRoutes = () => {
       <Route path="/blog/:blogId" element={<BlogDetail />} />
       <Route path="/services" element={<ServicePage />} />
       <Route path="/about" element={<AboutPage />} />
-      <Route path="/nutritionmanagement" element={<NutritionManagement />} />
-      <Route path="/nutritionalanalysis" element={<NutritionalAnalysis />} />
+      {/* <Route path="/nutritionmanagement" element={<NutritionManagement />} />
+      <Route path="/nutritionalanalysis" element={<NutritionalAnalysis />} /> */}
       <Route
         path="/dashboard"
         element={

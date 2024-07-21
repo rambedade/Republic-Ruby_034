@@ -11,12 +11,16 @@ import {
   Flex,
   VStack,
   useBreakpointValue,
+  useColorModeValue,
+  Alert,
+  AlertIcon,
 } from "@chakra-ui/react";
 
 export const ExerciseCalendar = () => {
   const [dates, setDates] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
   const [streak, setStreak] = useState(0);
+  const [error, setError] = useState(null);
   const userId = authMain.currentUser?.uid;
 
   useEffect(() => {
@@ -97,9 +101,10 @@ export const ExerciseCalendar = () => {
         ]);
         setSelectedDate(selectedDateString);
         calculateStreak([...dates, { date: selectedDateString, marked: true }]);
+        setError(null);
       }
     } else {
-      alert("You can only mark the current date.");
+      setError("You can only mark the current date.");
     }
   };
 
@@ -138,28 +143,41 @@ export const ExerciseCalendar = () => {
     ? `Marked ${dates.length} day${dates.length > 1 ? "s" : ""}`
     : "No days marked yet";
 
+  const bg = useColorModeValue("white", "gray.800");
+  const boxBg = useColorModeValue("gray.100", "gray.700");
+
   return (
     <Flex
       direction={useBreakpointValue({ base: "column", md: "row" })}
-      align="flex-center"
+      align="center"
       gap={8}
       p={6}
-      bg="white"
+      bg={bg}
       borderRadius="lg"
       boxShadow="md"
-      alignItems={"center"}
-      justifyItems={"center"}
+      alignItems="center"
+      justifyItems="center"
     >
-      <Box flex="1" minW="300px" alignContent={"center"}>
-        <Calendar onClickDay={handleMarkRoutine} tileContent={tileContent} />
+      <Box flex="1" minW="300px" alignContent="center">
+        <Calendar
+          onClickDay={handleMarkRoutine}
+          tileContent={tileContent}
+          className="react-calendar"
+        />
       </Box>
       <Box flex="1" minW="300px">
         <Heading as="h2" size="lg" mb={4} textAlign="center">
           Completed today’s exercise routine? Mark the calendar to track your
           progress.
         </Heading>
+        {error && (
+          <Alert status="error" mb={4}>
+            <AlertIcon />
+            {error}
+          </Alert>
+        )}
         <VStack align="stretch" spacing={6}>
-          <Box bg="gray.100" p={4} borderRadius="lg" boxShadow="md">
+          <Box bg={boxBg} p={4} borderRadius="lg" boxShadow="md">
             <Heading as="h3" size="lg" mb={2}>
               Summary
             </Heading>
@@ -168,7 +186,7 @@ export const ExerciseCalendar = () => {
               Current Streak: {streak} day{streak > 1 ? "s" : ""}
             </Text>
           </Box>
-          <Box bg="gray.100" p={4} borderRadius="lg" boxShadow="md">
+          <Box bg={boxBg} p={4} borderRadius="lg" boxShadow="md">
             <Heading as="h3" size="lg" mb={2}>
               Goal Suggestion
             </Heading>

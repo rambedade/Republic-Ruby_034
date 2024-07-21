@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { firestoreInstance, authMain } from "../../config/firebase";
-import { Box, Heading, Stack, Text } from "@chakra-ui/react";
+import { Box, Heading, Stack, Text, Spinner, Alert, AlertIcon, AlertTitle, AlertDescription, Icon } from "@chakra-ui/react";
+import { FaDumbbell, FaBullseye } from "react-icons/fa";
 
 export const SelectedPlan = () => {
   const [selectedExercises, setSelectedExercises] = useState([]);
@@ -34,35 +35,47 @@ export const SelectedPlan = () => {
   }, []);
 
   if (loading) {
-    return <Box textAlign="center">Loading...</Box>;
-  }
-
-  if (error) {
     return (
-      <Box textAlign="center" color="red.500">
-        Error: {error}
+      <Box textAlign="center" py={10}>
+        <Spinner size="xl" />
       </Box>
     );
   }
 
+  if (error) {
+    return (
+      <Alert status="error" variant="left-accent" my={4}>
+        <AlertIcon />
+        <AlertTitle mr={2}>Error:</AlertTitle>
+        <AlertDescription>{error}</AlertDescription>
+      </Alert>
+    );
+  }
+
   return (
-    <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
-      <Stack spacing={4}>
+    <Box bg="gray.50" p={6} borderRadius="lg" boxShadow="lg" maxW="md" mx="auto" my={8}>
+      <Stack spacing={6} textAlign="center">
         <Box>
-          <Heading as="h3" size="md" mb={2}>
+          <Heading as="h3" size="lg" mb={4} display="flex" justifyContent="center" alignItems="center" color="teal.500">
+            <Icon as={FaDumbbell} w={6} h={6} mr={2} />
             Selected Exercise Routines
           </Heading>
-          <Stack spacing={2}>
+          <Stack spacing={3}>
             {selectedExercises.map((exercise, index) => (
-              <Text key={index}>{exercise}</Text>
+              <Text key={index} fontSize="lg" color="gray.700" bg="teal.100" p={2} borderRadius="md">
+                {exercise}
+              </Text>
             ))}
           </Stack>
         </Box>
         <Box>
-          <Heading as="h3" size="md" mb={2}>
+          <Heading as="h3" size="lg" mb={4} display="flex" justifyContent="center" alignItems="center" color="purple.500">
+            <Icon as={FaBullseye} w={6} h={6} mr={2} />
             Selected Goal
           </Heading>
-          <Text>{goal}</Text>
+          <Text fontSize="lg" color="gray.700" bg="purple.100" p={2} borderRadius="md">
+            {goal}
+          </Text>
         </Box>
       </Stack>
     </Box>

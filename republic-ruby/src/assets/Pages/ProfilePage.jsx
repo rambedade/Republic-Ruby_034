@@ -7,6 +7,8 @@ import {
   Flex,
   Spinner,
   Text,
+  Divider,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { ProfileDetails } from "../component/ProfileInfo/ProfileDetails";
 import { SelectedPlan } from "../component/ProfileInfo/SelectedPlan";
@@ -31,10 +33,10 @@ export const ProfilePage = () => {
 
   if (loading) {
     return (
-      <Box py={12} bg={"gray.50"}>
+      <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
         <Container maxW="container.lg" textAlign="center">
           <Spinner size="xl" />
-          <Text mt={4}>Loading...</Text>
+          <Text mt={4} color="teal.500">Loading...</Text>
         </Container>
       </Box>
     );
@@ -42,43 +44,84 @@ export const ProfilePage = () => {
 
   if (!user) {
     return (
-      <Box py={12} bg={"gray.50"}>
+      <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
         <Container maxW="container.lg" textAlign="center">
-          <Text fontSize="xl">Please log in to view your profile.</Text>
+          <Text fontSize="xl" color="red.500">Please log in to view your profile.</Text>
         </Container>
       </Box>
     );
   }
 
   return (
-    <Box py={12} bg={"gray.50"}>
+    <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
       <Container maxW="container.lg">
         <Stack spacing={8}>
-          <Box>
+          <Box
+            bg={useColorModeValue("white", "gray.700")}
+            p={6}
+            borderRadius="lg"
+            boxShadow="md"
+          >
             <Flex
               direction={{ base: "column", md: "row" }}
               wrap="wrap"
               spacing={4}
+              justifyContent="space-between"
             >
-              <Box flex="1" minW="300px" display="flex" flexDirection="column">
+              <Box
+                flex="1"
+                minW="300px"
+                mb={{ base: 4, md: 0 }}
+                bg={useColorModeValue("green.50", "gray.800")}
+                p={4}
+                borderRadius="lg"
+                boxShadow="md"
+              >
                 <ProfileDetails />
               </Box>
-              <Box flex="1" minW="300px" display="flex" flexDirection="column">
+              <Box
+                flex="1"
+                minW="300px"
+                bg={useColorModeValue("yellow.50", "gray.800")}
+                p={4}
+                borderRadius="lg"
+                boxShadow="md"
+              >
                 <SelectedPlan />
               </Box>
             </Flex>
           </Box>
 
-          <ExerciseCalendar />
+          <Box
+            bg={useColorModeValue("blue.50", "gray.700")}
+            p={6}
+            borderRadius="lg"
+            boxShadow="md"
+          >
+            <ExerciseCalendar />
+          </Box>
 
-          <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
-            <Heading as="h2" size="xl" textAlign="center" mb={4}>
+          <Box
+            bg={useColorModeValue("white", "gray.700")}
+            p={6}
+            borderRadius="lg"
+            boxShadow="md"
+          >
+            <Heading as="h2" size="xl" textAlign="center" mb={4} color="teal.500">
               Food Diary
             </Heading>
+            <Divider mb={4} />
             <FoodDetails />
           </Box>
 
-          <ChangePlan />
+          <Box
+            bg={useColorModeValue("purple.50", "gray.700")}
+            p={6}
+            borderRadius="lg"
+            boxShadow="md"
+          >
+            <ChangePlan />
+          </Box>
         </Stack>
       </Container>
     </Box>

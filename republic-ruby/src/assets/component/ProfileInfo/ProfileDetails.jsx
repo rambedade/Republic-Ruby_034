@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { firestoreInstance, authMain } from "../../config/firebase";
-import { Box, Heading, Text } from "@chakra-ui/react";
+import { Box, Heading, Text, Spinner } from "@chakra-ui/react";
 
 export const ProfileDetails = () => {
-  const [profile, setProfile] = useState({ name: "", email: "" });
+  const [profile, setProfile] = useState({ firstName: "", lastName: "", email: "" });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -33,25 +33,38 @@ export const ProfileDetails = () => {
   }, []);
 
   if (loading) {
-    return <Box textAlign="center">Loading...</Box>;
+    return (
+      <Box textAlign="center" py={10}>
+        <Spinner size="xl" />
+      </Box>
+    );
   }
+
   if (error) {
     return (
-      <Box textAlign="center" color="red.500">
+      <Box textAlign="center" color="red.500" py={10}>
         Error: {error}
       </Box>
     );
   }
 
   return (
-    <Box bg="white" p={6} borderRadius="lg" boxShadow="md">
+    <Box 
+      bg="#0f678e" 
+      p={6} 
+      borderRadius="lg" 
+      boxShadow="md" 
+      maxW="400px" 
+      mx="auto" 
+      color="white"
+    >
       <Heading as="h2" size="lg" textAlign="center" mb={4}>
         Profile Details
       </Heading>
-      <Text>
+      <Text textAlign="center" fontSize="lg">
         <strong>Name:</strong> {`${profile.firstName} ${profile.lastName}`}
       </Text>
-      <Text>
+      <Text textAlign="center" fontSize="lg">
         <strong>Email:</strong> {profile.email}
       </Text>
     </Box>
