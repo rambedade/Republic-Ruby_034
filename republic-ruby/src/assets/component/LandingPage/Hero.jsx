@@ -51,7 +51,7 @@ export default function Hero() {
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}>
           <Heading
-            mt={200}
+            mt={100}
             className=' animate__animated animate__flipInX'
             fontWeight={600}
             fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
@@ -64,7 +64,7 @@ export default function Hero() {
           <Text color={'#FFFFF1'} maxW={'3xl'}>
             Never miss a health goal. Never be late for a meal. Keep track of your diet and daily health activities with smart reminders. Start your day with a personalized "Daily Health Agenda" to stay on top of your wellness journey.
           </Text>
-          <Stack spacing={6} direction={'row'}>
+          <Stack mb={100} spacing={6} direction={'row'}>
             <Button
               rounded={'full'}
               px={6}
