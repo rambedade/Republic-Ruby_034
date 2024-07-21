@@ -160,8 +160,9 @@ const DesktopNav = () => {
               <Box
                 as={NavLink}
                 p={2}
+                ml={3}
                 to={navItem.href ?? "#"}
-                fontSize={"sm"}
+                fontSize={"md"}
                 fontWeight={700}
                 color={linkColor}
                 _hover={{
