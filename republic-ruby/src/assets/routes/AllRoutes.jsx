@@ -51,8 +51,8 @@ export const AllRoutes = () => {
       <Route path="/blog/:blogId" element={<BlogDetail />} />
       <Route path="/services" element={<ServicePage />} />
       <Route path="/about" element={<AboutPage />} />
-      {/* <Route path="/nutrition-management" element={<NutritionManagement />} />
-      <Route path="/nutritional-analysis" element={<NutritionalAnalysis />} /> */}
+      <Route path="/nutritionmanagement" element={<NutritionManagement />} />
+      <Route path="/nutritionalanalysis" element={<NutritionalAnalysis />} />
       <Route
         path="/dashboard"
         element={
