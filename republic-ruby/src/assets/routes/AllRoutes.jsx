@@ -1,4 +1,3 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { HomePage } from "../Pages/HomePage";
 import { LoginPage } from "../Pages/LoginPage";
@@ -12,17 +11,43 @@ import { Dashboard } from "../Pages/Dashboard";
 import { ForgetPasswordPage } from "../Pages/ForgetPasswordPage";
 import BlogDetail from "../component/Blogs/BlogDetail";
 import { ServicePage } from "../Pages/ServicePage";
+import { NutritionalAnalysis } from "../Pages/NutritionalAnalysis";
 import { NutritionManagement } from "../Pages/NutritionManagement";
-import {NutritionalAnalysis} from "../Pages/NutritionalAnalysis";
-
+import { useAuth } from "../config/useAuth";
+import { Center, Spinner } from "@chakra-ui/react";
+import { AdminPanel } from "../Pages/AdminPanel";
 
 export const AllRoutes = () => {
+  const { user, role, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <Center h="100vh">
+        <Spinner size="xl" />
+      </Center>
+    );
+  }
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
-      <Route path="/profile" element={<ProfilePage />} />
+      <Route
+        path="/profile"
+        element={
+          <AuthRoute>
+            <ProfilePage />
+          </AuthRoute>
+        }
+      />
+      <Route
+        path="/admin"
+        element={
+          <AuthRoute>
+            <AdminPanel />
+          </AuthRoute>
+        }
+      />
       <Route path="/blog/:blogId" element={<BlogDetail />} />
       <Route path="/services" element={<ServicePage />} />
       <Route path="/about" element={<AboutPage />} />

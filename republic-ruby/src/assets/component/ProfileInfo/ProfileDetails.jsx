@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { firestoreInstance, authMain } from "../../config/firebase";
 import { Box, Heading, Text } from "@chakra-ui/react";
@@ -9,9 +9,11 @@ export const ProfileDetails = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log("fetch profile details");
     const fetchProfile = async () => {
       try {
         const user = authMain.currentUser;
+        console.log(user);
         if (user) {
           const profileRef = doc(firestoreInstance, "users", user.uid);
           const profileSnap = await getDoc(profileRef);
@@ -33,7 +35,6 @@ export const ProfileDetails = () => {
   if (loading) {
     return <Box textAlign="center">Loading...</Box>;
   }
-
   if (error) {
     return (
       <Box textAlign="center" color="red.500">

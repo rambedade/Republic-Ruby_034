@@ -1,29 +1,26 @@
-
 import React, { useEffect } from "react";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useAuth } from "../../config/useAuth";
 
 export const AuthRoute = (props) => {
   const { children } = props;
-  const auth = getAuth();
+  const { user, role, loading } = useAuth();
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
+    if (!loading) {
       if (user) {
-        setLoading(false);
+        if (role === "admin") {
+          navigate("/admin");
+        } else {
+          navigate("/profile");
+        }
       } else {
-        console.log("navigate to register");
         navigate("/register");
-        console.log(navigate);
       }
-    });
-
-    return () => unsubscribe();
-  }, [auth, navigate]);
+    }
+  }, [loading, user, role, navigate]);
 
   if (loading) return <p>Loading</p>;
   else return <>{children}</>;
