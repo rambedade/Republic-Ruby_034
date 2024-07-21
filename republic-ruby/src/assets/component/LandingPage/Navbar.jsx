@@ -201,8 +201,8 @@ const DesktopNav = () => {
 const DesktopSubNav = ({ label, href, subLabel }) => {
   return (
     <Box
-      as=""
-      href={href}
+      as={NavLink}
+      to={href ?? "#"}
       role={"group"}
       display={"block"}
       p={2}
@@ -257,8 +257,8 @@ const MobileNavItem = ({ label, children, href }) => {
     <Stack spacing={4} onClick={children && onToggle}>
       <Box
         py={2}
-        as="a"
-        href={href ?? "#"}
+        as={NavLink}
+        to={href ?? "#"}
         justifyContent="space-between"
         alignItems="center"
         _hover={{
