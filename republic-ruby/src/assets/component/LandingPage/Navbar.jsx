@@ -338,13 +338,6 @@ const NAV_ITEMS = [
     label: "Profile",
     href: "/profile",
   },
-  {
-    label:"NutritionManagement",
-    href:"/nutritionmanagement"
-  },
-  {
-    label:"NutritionalAnalysis",
-    href:"/nutritionalanalysis"
-  }
+  
   
 ];

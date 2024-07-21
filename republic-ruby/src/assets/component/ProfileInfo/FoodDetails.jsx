@@ -14,6 +14,8 @@ import {
   Flex,
   Alert,
   AlertIcon,
+  Heading,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { authMain, firestoreInstance } from "../../config/firebase";
 import { doc, setDoc, getDocs, collection } from "firebase/firestore";
@@ -60,14 +62,13 @@ export const FoodDetails = () => {
     const formattedDate = format(selectedDate, "yyyy-MM-dd");
 
     if (userId) {
-      // Update or add the entry
       await setDoc(
         doc(firestoreInstance, "users", userId, "foodDiary", formattedDate),
         {
           date: formattedDate,
           ...meals,
         },
-        { merge: true } // Use merge to update existing data or create new
+        { merge: true }
       );
       setEntries((prevEntries) => {
         const updatedEntries = prevEntries.filter(
@@ -76,50 +77,66 @@ export const FoodDetails = () => {
         return [...updatedEntries, { date: formattedDate, ...meals }];
       });
       setMeals({ breakfast: "", lunch: "", dinner: "" });
-      setError(null); // Clear error if submission is successful
+      setError(null);
     }
   };
 
+  const bg = useColorModeValue("gray.100", "gray.700");
+  const boxBg = useColorModeValue("white", "gray.800");
+
   return (
-    <Container maxW="container.md" bg="white" p={6}>
+    <Container maxW="container.md" bg={bg} p={6} borderRadius="lg" shadow="lg">
       <Box my={6}>
         <DatePicker
           selected={selectedDate}
           onChange={handleDateChange}
           dateFormat="yyyy-MM-dd"
-          customInput={<Button>{format(selectedDate, "dd MMMM yyyy")}</Button>}
+          customInput={
+            <Button colorScheme="teal" size="lg" bg="#ff3a00">
+              {format(selectedDate, "dd MMMM yyyy")}
+            </Button>
+          }
         />
       </Box>
-      <Flex justifyContent={"space-between"} alignContent={"space-between"}>
-        <VStack as="form" onSubmit={handleSubmit} spacing={4}>
+      <Flex justifyContent={"space-between"} alignItems={"flex-start"} flexWrap="wrap">
+        <VStack as="form" onSubmit={handleSubmit} spacing={6} w="48%">
           <FormControl>
-            <FormLabel>Breakfast</FormLabel>
+            <FormLabel fontSize="lg">Breakfast</FormLabel>
             <Input
               type="text"
               name="breakfast"
               value={meals.breakfast}
               onChange={handleInputChange}
+              variant="outline"
+              size="lg"
+              bg="white"
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Lunch</FormLabel>
+            <FormLabel fontSize="lg">Lunch</FormLabel>
             <Input
               type="text"
               name="lunch"
               value={meals.lunch}
               onChange={handleInputChange}
+              variant="outline"
+              size="lg"
+              bg="white"
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Dinner</FormLabel>
+            <FormLabel fontSize="lg">Dinner</FormLabel>
             <Input
               type="text"
               name="dinner"
               value={meals.dinner}
               onChange={handleInputChange}
+              variant="outline"
+              size="lg"
+              bg="white"
             />
           </FormControl>
-          <Button type="submit" colorScheme="teal">
+          <Button type="submit" colorScheme="teal" size="lg" bg="#ff3a00">
             Save
           </Button>
           {error && (
@@ -129,16 +146,14 @@ export const FoodDetails = () => {
             </Alert>
           )}
         </VStack>
-        <Box my={6}>
-          <Text fontSize="2xl" mb={4}>
+        <Box w="48%" bg={boxBg} p={6} borderRadius="lg" shadow="md">
+          <Heading as="h2" size="lg" mb={4} textAlign="center">
             Entries for {format(selectedDate, "yyyy-MM-dd")}
-          </Text>
+          </Heading>
           {entries
-            .filter(
-              (entry) => entry.date === format(selectedDate, "yyyy-MM-dd")
-            )
+            .filter((entry) => entry.date === format(selectedDate, "yyyy-MM-dd"))
             .map((entry, index) => (
-              <Box key={index} p={4} shadow="md" borderWidth="1px" mb={4}>
+              <Box key={index} p={4} mb={4} borderWidth="1px" borderRadius="lg" shadow="sm" bg={bg}>
                 <Text>
                   <strong>Breakfast:</strong> {entry.breakfast}
                 </Text>
