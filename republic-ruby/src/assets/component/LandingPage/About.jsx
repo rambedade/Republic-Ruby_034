@@ -18,7 +18,7 @@ import { NavLink } from 'react-router-dom'
 export default function About() {
   return (
     <>
-      <Box bgGradient={'linear-gradient(324deg, rgba(255,255,255,1) 68%, rgba(255,79,0,1) 100%)'}>
+      <Box backgroundImage={'Yoga-Pastel-Sun-FB.webp'} bgGradient={'linear-gradient(324deg, rgba(255,255,255,1) 68%, rgba(255,79,0,1) 100%)'}>
       <Container maxW={'3xl'}>
       <Stack
         textAlign={'center'}

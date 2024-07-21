@@ -7,8 +7,10 @@ import {
   MessageInput,
   TypingIndicator,
 } from "@chatscope/chat-ui-kit-react";
+import 'animate.css';
 import "@chatscope/chat-ui-kit-styles/dist/default/styles.min.css";
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import { Image } from "@chakra-ui/react";
 
 export const GoogleAI = () => {
   const [userInput, setUserInput] = useState("");
@@ -53,22 +55,36 @@ export const GoogleAI = () => {
   return (
     <div>
       <button
-        style={{
-          position: "fixed",
-          bottom: "20px",
-          right: "20px",
-          zIndex: 1000,
-          padding: "10px",
-          borderRadius: "50%",
-          backgroundColor: "#ff4f00",
-          color: "white",
-          border: "none",
-          cursor: "pointer",
-        }}
-        onClick={toggleChat}
-      >
-        {isOpen ? "−" : "✉️"}
-      </button>
+  style={{
+    position: "fixed",
+    bottom: "20px",
+    right: "20px",
+    zIndex: 1000,
+    padding: "10px",
+    borderRadius: "10px",
+    backgroundColor: "#ff4f00",
+    color: "white",
+    border: "none",
+    cursor: "pointer",
+    boxSizing: "border-box",
+    overflow: "hidden",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center"
+  }}
+  onClick={toggleChat}
+  className="animate__animated animate__swing"
+>
+  {isOpen ? (
+    "Ask your Queries"
+  ) : (
+    <><p style={{marginRight:"5px"}}>Ask me anything</p><img 
+    style={{ maxWidth: "40px", maxHeight: "40px", objectFit: "cover" }} 
+    src='artificial-intelligence.gif' 
+    alt="AI"
+  /></>
+  )}
+</button>
       {isOpen && (
         <div
           style={{
