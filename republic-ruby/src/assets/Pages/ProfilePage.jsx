@@ -53,7 +53,7 @@ export const ProfilePage = () => {
   }
 
   return (
-    <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
+    <Box py={12} bg={"black"}>
       <Container maxW="container.lg">
         <Stack spacing={8}>
           <Box
