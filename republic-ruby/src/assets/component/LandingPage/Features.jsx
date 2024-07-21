@@ -65,8 +65,7 @@ export default function Features() {
           Features
         </Heading>
         <Text color={'white.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati ut
-          cupiditate pariatur, dignissimos, placeat amet officiis.
+        Log and monitor your daily workouts, visualize your fitness journey with graphs and charts, and receive customized workout plans tailored to your fitness level, goals, and preferences, all while staying motivated with personalized insights.
         </Text>
       </Stack>
 
