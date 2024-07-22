@@ -164,7 +164,7 @@ The tech stack used for the project:
 
 ## How to Use
 To run this project locally:
-1. Clone this repository to your local machine.
+1. Clone this repository : https://github.com/rambedade/Republic-Ruby_034.git    to your local machine.
 2. Open the index.html file in your preferred web browser.
 3. Explore the TaptiBnb website experience right from your device.
 
