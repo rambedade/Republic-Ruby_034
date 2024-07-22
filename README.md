@@ -22,59 +22,55 @@ In the modern era, maintaining a healthy lifestyle is increasingly important. Wi
  ├─ public/
  ├─ src/
  │ ├─ assets/
- │           ├─ Pages/
- |                   ├─ AboutPage.jsx
- |                   ├─ AdminPanel.jsx
- |                   ├─ ArticlesPage.jsx
- |                   ├─ Dashboard.jsx
- |                   ├─ ForgetPasswordPage.jsx
- |                   ├─ HomePage.jsx
- |                   ├─ LoginPage.jsx
- |                   ├─ ProfilePage.jsx
- |                   ├─ RegisterPage.jsx
- |                   ├─ ServicePage.jsx
- |  
- │           ├─ components/
- |                         ├─ blogs/
- |                            ├─ BlogDetail.jsx
- |                            ├─ Blogs.jsx
- |                            ├─ Data.jsx
+ │  ├─ Pages/
+ |   ├─ AboutPage.jsx
+ |   ├─ AdminPanel.jsx
+ |   ├─ ArticlesPage.jsx
+ |   ├─ Dashboard.jsx
+ |   ├─ ForgetPasswordPage.jsx
+ |   ├─ HomePage.jsx
+ |   ├─ LoginPage.jsx
+ |   ├─ ProfilePage.jsx
+ |   ├─ RegisterPage.jsx
+ |   ├─ ServicePage.jsx
+ │  ├─ components/
+ |    ├─ blogs/
+ |     ├─ BlogDetail.jsx
+ |     ├─ Blogs.jsx
+ |     ├─ Data.jsx
  |
- |                         ├─ LandingPages /  
- |                             ├─ About.jsx      
- |                             ├─ Features.jsx
- |                             ├─ Footer.jsx
- |                             ├─ ForgetPassword.jsx
- |                             ├─ Goals.jsx
- |                             ├─ GoogleAi.jsx
- |                             ├─ Hero.jsx
- |                             ├─ Login.jsx
- |                             ├─ Navbar.jsx
- |                             ├─ PagenotFound.jsx  
- |                             ├─ Register.jsx 
- |                             ├─ Solutions.jsx 
- |                             ├─ Testimonials.jsx
+ |  ├─ LandingPages /  
+ |      ├─ About.jsx      
+ |      ├─ Features.jsx
+ |      ├─ Footer.jsx
+ |      ├─ ForgetPassword.jsx
+ |      ├─ Goals.jsx
+ |      ├─ GoogleAi.jsx
+ |      ├─ Hero.jsx
+ |      ├─ Login.jsx
+ |      ├─ Navbar.jsx
+ |      ├─ PagenotFound.jsx  
+ |      ├─ Register.jsx 
+ |      ├─ Solutions.jsx 
+ |      ├─ Testimonials.jsx
  |                      
- |                          ├─ ProfileInfo /
- |                             ├─ ChangePlan.jsx
- |                             ├─ ExerciseCalender.jsx
- |                             ├─ FoodDetails.jsx
- |                             ├─ ProfileDetails.jsx
- |                             ├─ SelectedPlan.jsx
+ |  ├─ ProfileInfo /
+ |      ├─ ChangePlan.jsx
+ |      ├─ ExerciseCalender.jsx
+ |      ├─ FoodDetails.jsx
+ |      ├─ ProfileDetails.jsx
+ |      ├─ SelectedPlan.jsx
  |
- |                          ├─ firebase /
- |                             ├─ AuthRoute.jsx   
- |                             ├─ FetchAllData.jsx
- |
- |           ├─ config/ 
- |             ├─ config.js
- |             ├─ firebase.js
- |             ├─  useAuth.js    
- |             
- |          ├─ routes/
- |                     ├─ AllRoutes.jsx/
- |      
- |          ├─   react.svg
+ |   ├─ firebase /
+ |      ├─ AuthRoute.jsx   
+ |       ├─ FetchAllData.jsx
+ |   ├─ config/ 
+ |       ├─ config.js
+ |       ├─ firebase.js
+ |       ├─  useAuth.js        
+ |    ├─ routes/
+ |       ├─ AllRoutes.jsx/
+ |    ├─   react.svg
  |
  ├─ .env
  ├─ .eslintrc.cjs
@@ -149,6 +145,9 @@ The tech stack used for the project:
 ### Backend:
 - Firebase
 - JSON Server
+
+##Screenshots
+
 ![image](https://github.com/user-attachments/assets/5d5d53f7-26ed-48f3-aca7-c653d9e1d720)
 ![image](https://github.com/user-attachments/assets/02e2f9e9-d89d-4284-857c-b1d3c1be7951)
 ![image](https://github.com/user-attachments/assets/def064ef-5e94-4d7a-ae25-05ad3cea48f9)
