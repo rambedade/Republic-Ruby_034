@@ -22,56 +22,52 @@ In the modern era, maintaining a healthy lifestyle is increasingly important. Wi
  ├─ public/
  ├─ src/
  │ ├─ assets/
- │  ├─ Pages/
- |   ├─ AboutPage.jsx
- |   ├─ AdminPanel.jsx
- |   ├─ ArticlesPage.jsx
- |   ├─ Dashboard.jsx
- |   ├─ ForgetPasswordPage.jsx
- |   ├─ HomePage.jsx
- |   ├─ LoginPage.jsx
- |   ├─ ProfilePage.jsx
- |   ├─ RegisterPage.jsx
- |   ├─ ServicePage.jsx
- │  ├─ components/
- |    ├─ blogs/
- |     ├─ BlogDetail.jsx
- |     ├─ Blogs.jsx
- |     ├─ Data.jsx
- |
- |  ├─ LandingPages /  
- |      ├─ About.jsx      
- |      ├─ Features.jsx
- |      ├─ Footer.jsx
- |      ├─ ForgetPassword.jsx
- |      ├─ Goals.jsx
- |      ├─ GoogleAi.jsx
- |      ├─ Hero.jsx
- |      ├─ Login.jsx
- |      ├─ Navbar.jsx
- |      ├─ PagenotFound.jsx  
- |      ├─ Register.jsx 
- |      ├─ Solutions.jsx 
- |      ├─ Testimonials.jsx
- |                      
- |  ├─ ProfileInfo /
- |      ├─ ChangePlan.jsx
- |      ├─ ExerciseCalender.jsx
- |      ├─ FoodDetails.jsx
- |      ├─ ProfileDetails.jsx
- |      ├─ SelectedPlan.jsx
- |
- |   ├─ firebase /
- |      ├─ AuthRoute.jsx   
- |       ├─ FetchAllData.jsx
- |   ├─ config/ 
- |       ├─ config.js
- |       ├─ firebase.js
- |       ├─  useAuth.js        
- |    ├─ routes/
- |       ├─ AllRoutes.jsx/
- |    ├─   react.svg
- |
+ │ ├─ Pages/
+ |  ├─ AboutPage.jsx
+ |  ├─ AdminPanel.jsx
+ |  ├─ ArticlesPage.jsx
+ |  ├─ Dashboard.jsx
+ |  ├─ ForgetPasswordPage.jsx
+ |  ├─ HomePage.jsx
+ |  ├─ LoginPage.jsx
+ |  ├─ ProfilePage.jsx
+ |  ├─ RegisterPage.jsx
+ |  ├─ ServicePage.jsx
+ │ ├─ components/
+ |  ├─ blogs/
+ |   ├─ BlogDetail.jsx
+ |   ├─ Blogs.jsx
+ |   ├─ Data.jsx
+ | ├─ LandingPages /  
+ |  ├─ About.jsx      
+ |   ├─ Features.jsx
+ |   ├─ Footer.jsx
+ |   ├─ ForgetPassword.jsx
+ |   ├─ Goals.jsx
+ |   ├─ GoogleAi.jsx
+ |   ├─ Hero.jsx
+ |   ├─ Login.jsx
+ |   ├─ Navbar.jsx
+ |   ├─ PagenotFound.jsx  
+ |   ├─ Register.jsx 
+ |   ├─ Solutions.jsx 
+ |   ├─ Testimonials.jsx                   
+ | ├─ ProfileInfo /
+ |  ├─ ChangePlan.jsx
+ |  ├─ ExerciseCalender.jsx
+ |  ├─ FoodDetails.jsx
+ |  ├─ ProfileDetails.jsx
+ |  ├─ SelectedPlan.jsx
+ | ├─ firebase /
+ |  ├─ AuthRoute.jsx   
+ |  ├─ FetchAllData.jsx
+ | ├─ config/ 
+ |  ├─ config.js
+ |  ├─ firebase.js
+ |  ├─  useAuth.js        
+ | ├─ routes/
+ |  ├─ AllRoutes.jsx/
+ | ├─   react.svg
  ├─ .env
  ├─ .eslintrc.cjs
  ├─ .gitignore
@@ -130,7 +126,7 @@ Questions based on the project can be found here:
   - Break down tasks and create a structured plan for project execution within the given deadline.
 - **Task Execution:**
   - Team members should start working on their assigned tasks and features.
-  - 
+  
 ## Tech Stack
 The tech stack used for the project:
 
@@ -151,35 +147,45 @@ The tech stack used for the project:
 ## Screenshots
 
 ### Home Page
-![Home Page](https://github.com/user-attachments/assets/5d5d53f7-26ed-48f3-aca7-c653d9e1d720)
+![image](https://github.com/user-attachments/assets/012fa2fa-5fb2-4ccf-a484-0716092eaaf7)
+
 
 ### Sign In Page
-![Sign In Page](https://github.com/user-attachments/assets/a6d7beab-a3df-4919-8faf-181debeb7f5f)
+![image](https://github.com/user-attachments/assets/e7d2afa8-c69a-40aa-9030-b91bf4f4bed2)
+
 
 ### Sign Up Page
-![Sign Up Page](https://github.com/user-attachments/assets/62d3b695-3136-47aa-9f68-37757d2526d4)
+![image](https://github.com/user-attachments/assets/76f6af2e-a86f-4dc3-9dcc-e0f653b7cea4)
+
 
 ### About Page
-![About Page](https://github.com/user-attachments/assets/1c0ec7a8-eb22-4101-ad61-3db7d76d7433)
+![image](https://github.com/user-attachments/assets/baf67313-b0fd-42bb-99e6-a6e7424fca89)
+
 
 ### Article Page
-![Article Page](https://github.com/user-attachments/assets/22fec553-bf8a-49f6-b4ce-739d95b7b75d)
+![image](https://github.com/user-attachments/assets/310cb475-4846-4688-8f16-e93820c8b75a)
+
+### Services Page
+![image](https://github.com/user-attachments/assets/d76f67c3-fdf0-44f2-993d-ab50154857e4)
+ 
 
 ### Profile Page
-![Profile Page](https://github.com/user-attachments/assets/81619314-feb2-4559-a71c-34c1257a9420)
-
-### Responsive Page 
-![Responsive Page](https://github.com/user-attachments/assets/d709a835-b9f0-4b42-af4e-3e49a768a394)
-
-### Responsive Page 
-![Responsive Page](https://github.com/user-attachments/assets/143a98ae-fa99-43b1-bf52-cbe391a4f974)
+![image](https://github.com/user-attachments/assets/beb2fe0b-611e-48a3-bc6d-a6d46b3f9257)
 
 
-### Responsive Page
-![Responsive Page](https://github.com/user-attachments/assets/4c24e4f0-4a7a-4cfb-b4ee-670f28f1b406)
 
-### Responsive Page
-![Responsive Page](https://github.com/user-attachments/assets/b7fb73b3-59e6-4288-afee-909baa936908)
+
+### Mobile View
+
+![image](https://github.com/user-attachments/assets/68631d9b-1489-48d7-a9b4-723e7e9e501e)
+![image](https://github.com/user-attachments/assets/910dcc23-6b0d-45be-a1ae-719e7dbf6c22)
+![image](https://github.com/user-attachments/assets/5edf0569-d6d1-4971-a206-188c4fefb9f9)
+![image](https://github.com/user-attachments/assets/97255176-39b5-40d7-9298-37a08ff51c9c)
+![image](https://github.com/user-attachments/assets/b2bf21ec-f09a-4364-86a9-1c5cb6762e17)
+
+
+
+
 
 
 
@@ -188,8 +194,9 @@ The tech stack used for the project:
 ## How to Use
 To run this project locally:
 1. Clone this repository : https://github.com/rambedade/Republic-Ruby_034.git    to your local machine.
-2. Open the index.html file in your preferred web browser.
-3. Explore the Lean & Lift website experience right from your device.
+2. Open Terminal
+3. Run npm run dev command
+4. Explore the Lean & Lift website experience right from your device.
 
 ## Contributors
 - [Rameshwar Bedade] - https://github.com/rambedade
