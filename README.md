@@ -178,7 +178,7 @@ The tech stack used for the project:
 To run this project locally:
 1. Clone this repository : https://github.com/rambedade/Republic-Ruby_034.git    to your local machine.
 2. Open the index.html file in your preferred web browser.
-3. Explore the Leand&lift website experience right from your device.
+3. Explore the Lean & Lift website experience right from your device.
 
 ## Contributors
 - [Rameshwar Bedade] - https://github.com/rambedade
