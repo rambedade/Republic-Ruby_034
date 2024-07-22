@@ -146,18 +146,36 @@ The tech stack used for the project:
 - Firebase
 - JSON Server
 
-##Screenshots
+## Screenshots
 
-![image](https://github.com/user-attachments/assets/5d5d53f7-26ed-48f3-aca7-c653d9e1d720)
-![image](https://github.com/user-attachments/assets/02e2f9e9-d89d-4284-857c-b1d3c1be7951)
-![image](https://github.com/user-attachments/assets/def064ef-5e94-4d7a-ae25-05ad3cea48f9)
-![image](https://github.com/user-attachments/assets/310f9de7-3692-418c-91b1-3d59b6268633)
-![image](https://github.com/user-attachments/assets/3bb8a51b-63c8-4203-9721-016fb3deedcb)
-![image](https://github.com/user-attachments/assets/9f868993-c7f6-46bf-bc43-cd38d2580919)
-![image](https://github.com/user-attachments/assets/bb7da3d5-6a62-40fe-b69b-0aac36471489)
-![image](https://github.com/user-attachments/assets/7b04736d-906f-4ca8-92e7-163f376a92a2)
+### Home Page
+![Home Page](https://github.com/user-attachments/assets/5d5d53f7-26ed-48f3-aca7-c653d9e1d720)
 
-![image](https://github.com/user-attachments/assets/e3618494-65b7-4024-b395-c3e08099418f)
+### Sign In Page
+![Sign In Page](![image](https://github.com/user-attachments/assets/a6d7beab-a3df-4919-8faf-181debeb7f5f)
+)
+
+### Sign Up Page
+![Sign Up Page](![image](https://github.com/user-attachments/assets/62d3b695-3136-47aa-9f68-37757d2526d4)
+)
+
+### About Page
+![About Page](![image](https://github.com/user-attachments/assets/1c0ec7a8-eb22-4101-ad61-3db7d76d7433)
+)
+
+### Article Page
+![Article Page](![image](https://github.com/user-attachments/assets/22fec553-bf8a-49f6-b4ce-739d95b7b75d)
+)
+
+### Profile Page
+![Profile Page]![image](https://github.com/user-attachments/assets/81619314-feb2-4559-a71c-34c1257a9420)
+)
+
+### Responsive Page
+![Responsive Page](![image](https://github.com/user-attachments/assets/d709a835-b9f0-4b42-af4e-3e49a768a394)
+)
+
+
 
 
 
