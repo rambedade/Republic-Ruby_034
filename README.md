@@ -168,10 +168,10 @@ To run this project locally:
 3. Explore the TaptiBnb website experience right from your device.
 
 ## Contributors
-- Rameshawar Bedade
-- Deepak Dilip Maurya
-- Everus Lainus
-- Pawan Shankar Lekurwale
+- [Rameshwar Bedade] - https://github.com/rambedade
+- [Deepak Dilip Maurya] - https://github.com/deep-maurya
+- [Everus Lainus] - https://github.com/EverusLainus
+- [Pawan Shankar Lekurwale] - https://github.com/plpatil1
 
 ## Resource:
 - [How to Use GitHub for Project Management](https://www.youtube.com/watch?v=DuAyYsWbt5o)
