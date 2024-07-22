@@ -4,8 +4,8 @@
 In the modern era, maintaining a healthy lifestyle is increasingly important. With the rise of sedentary jobs and busy schedules, many individuals struggle to manage their health and wellness effectively. Numerous applications provide fitness tracking, diet planning, and wellness tips, but they often lack integration and personalization. This project aims to develop a unique platform that stands out in the market by offering a holistic and personalized approach to health management.
 
 ## Deployed Links:
-- Frontend: [YouTube Link](https://www.youtube.com/watch?v=vc5j0YQuRk8)
-- Backend: [Firebase Console](https://console.firebase.google.com/project/wellnessapp-537d4/overview)
+- Frontend: https://leanandlift.netlify.app/
+- Backend: https://console.firebase.google.com/project/wellnessapp-537d4/overview
 
 ## Project Type
 - **Frontend:** The project is primarily a front-end project which utilizes a mock server to simulate the back-end.
