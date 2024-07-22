@@ -152,28 +152,28 @@ The tech stack used for the project:
 ![Home Page](https://github.com/user-attachments/assets/5d5d53f7-26ed-48f3-aca7-c653d9e1d720)
 
 ### Sign In Page
-![Sign In Page](![image](https://github.com/user-attachments/assets/a6d7beab-a3df-4919-8faf-181debeb7f5f)
-)
+![Sign In Page](![image]https://github.com/user-attachments/assets/a6d7beab-a3df-4919-8faf-181debeb7f5f)
+
 
 ### Sign Up Page
-![Sign Up Page](![image](https://github.com/user-attachments/assets/62d3b695-3136-47aa-9f68-37757d2526d4)
-)
+![Sign Up Page](![image]https://github.com/user-attachments/assets/62d3b695-3136-47aa-9f68-37757d2526d4)
+
 
 ### About Page
-![About Page](![image](https://github.com/user-attachments/assets/1c0ec7a8-eb22-4101-ad61-3db7d76d7433)
-)
+![About Page](![image]https://github.com/user-attachments/assets/1c0ec7a8-eb22-4101-ad61-3db7d76d7433)
+
 
 ### Article Page
-![Article Page](![image](https://github.com/user-attachments/assets/22fec553-bf8a-49f6-b4ce-739d95b7b75d)
-)
+![Article Page](![image]https://github.com/user-attachments/assets/22fec553-bf8a-49f6-b4ce-739d95b7b75d)
+
 
 ### Profile Page
-![Profile Page]![image](https://github.com/user-attachments/assets/81619314-feb2-4559-a71c-34c1257a9420)
-)
+![Profile Page]![image]https://github.com/user-attachments/assets/81619314-feb2-4559-a71c-34c1257a9420)
+
 
 ### Responsive Page
-![Responsive Page](![image](https://github.com/user-attachments/assets/d709a835-b9f0-4b42-af4e-3e49a768a394)
-)
+![Responsive Page](![image]https://github.com/user-attachments/assets/d709a835-b9f0-4b42-af4e-3e49a768a394)
+
 
 
 
