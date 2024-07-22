@@ -168,8 +168,19 @@ The tech stack used for the project:
 ### Profile Page
 ![Profile Page](https://github.com/user-attachments/assets/81619314-feb2-4559-a71c-34c1257a9420)
 
-### Responsive Page
+### Responsive Page 
 ![Responsive Page](https://github.com/user-attachments/assets/d709a835-b9f0-4b42-af4e-3e49a768a394)
+
+### Responsive Page 
+![Responsive Page](https://github.com/user-attachments/assets/143a98ae-fa99-43b1-bf52-cbe391a4f974)
+
+
+### Responsive Page
+![Responsive Page](https://github.com/user-attachments/assets/4c24e4f0-4a7a-4cfb-b4ee-670f28f1b406)
+
+### Responsive Page
+![Responsive Page](https://github.com/user-attachments/assets/b7fb73b3-59e6-4288-afee-909baa936908)
+
 
 
 
