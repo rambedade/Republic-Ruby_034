@@ -2,7 +2,7 @@ import { authMain } from "./firebase";
 import React, { useEffect, useState } from "react";
 
 export const adminEmails = [
-  "admin@g.com", //adminadmin
+  "admin@g.com",
   "admin1@g.com",
   // Add other admin emails here
 ];

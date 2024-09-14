@@ -36,7 +36,9 @@ export const ProfilePage = () => {
       <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
         <Container maxW="container.lg" textAlign="center">
           <Spinner size="xl" />
-          <Text mt={4} color="teal.500">Loading...</Text>
+          <Text mt={4} color="teal.500">
+            Loading...
+          </Text>
         </Container>
       </Box>
     );
@@ -46,7 +48,9 @@ export const ProfilePage = () => {
     return (
       <Box py={12} bg={useColorModeValue("gray.50", "gray.900")}>
         <Container maxW="container.lg" textAlign="center">
-          <Text fontSize="xl" color="red.500">Please log in to view your profile.</Text>
+          <Text fontSize="xl" color="red.500">
+            Please log in to view your profile.
+          </Text>
         </Container>
       </Box>
     );
@@ -71,16 +75,14 @@ export const ProfilePage = () => {
               <Box
                 flex="1"
                 minW="400px"
-                minH='500px'
+                minH="500px"
                 mb={{ base: 4, md: 0 }}
-                // bg={useColorModeValue("green.50", "gray.800")}
                 bg={useColorModeValue("yellow.50", "gray.800")}
                 p={4}
                 borderRadius="lg"
                 boxShadow="md"
-                display='flex'
-                placeItems='center'
-
+                display="flex"
+                placeItems="center"
               >
                 <ProfileDetails />
               </Box>

@@ -55,7 +55,6 @@ export const ExerciseCalendar = () => {
       return;
     }
 
-    // Sort dates in descending order
     const sortedDates = datesArray
       .map((d) => parseISO(d.date))
       .sort((a, b) => b - a);
@@ -177,7 +176,7 @@ export const ExerciseCalendar = () => {
           </Alert>
         )}
         <VStack align="stretch" spacing={6}>
-          <Box  p={4} borderRadius="lg" boxShadow="md" bg="purple.100">
+          <Box p={4} borderRadius="lg" boxShadow="md" bg="purple.100">
             <Heading as="h3" size="lg" mb={2}>
               Summary
             </Heading>

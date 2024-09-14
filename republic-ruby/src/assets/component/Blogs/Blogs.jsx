@@ -10,20 +10,20 @@ import {
   Input,
   Alert,
   AlertIcon,
-} from '@chakra-ui/react';
-import { NavLink } from 'react-router-dom';
-import { blogPosts } from './Data';
-import { doc, getDoc } from 'firebase/firestore';
-import { firestoreInstance, authMain } from '../../config/firebase';
-import { useEffect, useState, useCallback } from 'react';
-import debounce from 'lodash.debounce';
+} from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
+import { blogPosts } from "./Data";
+import { doc, getDoc } from "firebase/firestore";
+import { firestoreInstance, authMain } from "../../config/firebase";
+import { useEffect, useState, useCallback } from "react";
+import debounce from "lodash.debounce";
 
 // BlogTags Component
 const BlogTags = ({ marginTop = 0, tags }) => {
   return (
     <HStack spacing={2} marginTop={marginTop}>
       {tags.map((tag) => (
-        <Tag size={'md'} variant="solid" colorScheme="orange" key={tag}>
+        <Tag size={"md"} variant="solid" colorScheme="orange" key={tag}>
           {tag}
         </Tag>
       ))}
@@ -31,7 +31,6 @@ const BlogTags = ({ marginTop = 0, tags }) => {
   );
 };
 
-// BlogAuthor Component
 const BlogAuthor = ({ name, date }) => {
   return (
     <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
@@ -42,14 +41,13 @@ const BlogAuthor = ({ name, date }) => {
   );
 };
 
-// Blogs Component
 const Blogs = () => {
   const [selectedExercises, setSelectedExercises] = useState([]);
-  const [goal, setGoal] = useState('');
+  const [goal, setGoal] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [blogs, setBlogs] = useState(blogPosts);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [filteredBlogs, setFilteredBlogs] = useState(blogPosts);
 
   useEffect(() => {
@@ -57,18 +55,20 @@ const Blogs = () => {
       try {
         const user = authMain.currentUser;
         if (user) {
-          const docRef = doc(firestoreInstance, 'plan', user.uid);
+          const docRef = doc(firestoreInstance, "plan", user.uid);
           const docSnap = await getDoc(docRef);
           if (docSnap.exists()) {
-            const data = docSnap.data(); 
+            const data = docSnap.data();
             setSelectedExercises(data.exercises || []);
-            setGoal(data.goal || '');
-            setFilteredBlogs(blogPosts.filter((post) => post.tags.includes(data.goal)));
+            setGoal(data.goal || "");
+            setFilteredBlogs(
+              blogPosts.filter((post) => post.tags.includes(data.goal))
+            );
           }
         }
       } catch (error) {
-        console.error('Error fetching exercise data:', error);
-        setError('Error fetching data. Please try again later.');
+        console.error("Error fetching exercise data:", error);
+        setError("Error fetching data. Please try again later.");
       } finally {
         setLoading(false);
       }
@@ -76,13 +76,13 @@ const Blogs = () => {
     fetchData();
   }, []);
 
-  // Debounce search handler
   const handleSearch = useCallback(
     debounce((term) => {
       setFilteredBlogs(
-        blogs.filter((post) =>
-          post.title.toLowerCase().includes(term.toLowerCase()) ||
-          post.content.toLowerCase().includes(term.toLowerCase())
+        blogs.filter(
+          (post) =>
+            post.title.toLowerCase().includes(term.toLowerCase()) ||
+            post.content.toLowerCase().includes(term.toLowerCase())
         )
       );
     }, 300),
@@ -96,7 +96,7 @@ const Blogs = () => {
   };
 
   return (
-    <Container maxW={'5xl'} p="12">
+    <Container maxW={"5xl"} p="12">
       {loading && <Spinner />}
       {error && <p>{error}</p>}
       {!loading && !error && (
@@ -114,8 +114,11 @@ const Blogs = () => {
             </Alert>
           )}
           {filteredBlogs.map((post, index) => (
-            <Box key={index} marginTop={{ base: '5', sm: '10' }}>
-              <Box display={{ base: 'block', sm: 'flex' }} justifyContent="space-between">
+            <Box key={index} marginTop={{ base: "5", sm: "10" }}>
+              <Box
+                display={{ base: "block", sm: "flex" }}
+                justifyContent="space-between"
+              >
                 <Box
                   as={NavLink}
                   to={`/blog/${post.id}`}
@@ -123,11 +126,14 @@ const Blogs = () => {
                   flex="1"
                   flexDirection="column"
                   justifyContent="center"
-                  marginTop={{ base: '3', sm: '0' }}
+                  marginTop={{ base: "3", sm: "0" }}
                 >
                   <BlogTags tags={post.tags} />
                   <Heading marginTop="1">
-                    <Text textDecoration="none" _hover={{ textDecoration: 'none' }}>
+                    <Text
+                      textDecoration="none"
+                      _hover={{ textDecoration: "none" }}
+                    >
                       {post.title}
                     </Text>
                   </Heading>

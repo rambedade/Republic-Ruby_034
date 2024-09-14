@@ -4,7 +4,11 @@ import { firestoreInstance, authMain } from "../../config/firebase";
 import { Box, Heading, Text, Spinner } from "@chakra-ui/react";
 
 export const ProfileDetails = () => {
-  const [profile, setProfile] = useState({ firstName: "", lastName: "", email: "" });
+  const [profile, setProfile] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+  });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -50,25 +54,24 @@ export const ProfileDetails = () => {
 
   return (
     <Box
-    bg="#a493ef"
-    p={6}
-    borderRadius="lg"
-    boxShadow="md"
-    maxW="400px"
-    mx="auto"
-    color="black"
-    textAlign="center" // Center-aligns all text within the box
-  >
-    <Heading as="h2" size="lg" mb={4}>
-      Profile Details
-    </Heading>
-    <Text fontSize="lg" mb={2}>
-      <strong>Name:</strong> {`${profile.firstName} ${profile.lastName}`}
-    </Text>
-    <Text fontSize="lg">
-      <strong>Email:</strong> {profile.email}
-    </Text>
-  </Box>
-  
+      bg="#a493ef"
+      p={6}
+      borderRadius="lg"
+      boxShadow="md"
+      maxW="400px"
+      mx="auto"
+      color="black"
+      textAlign="center"
+    >
+      <Heading as="h2" size="lg" mb={4}>
+        Profile Details
+      </Heading>
+      <Text fontSize="lg" mb={2}>
+        <strong>Name:</strong> {`${profile.firstName} ${profile.lastName}`}
+      </Text>
+      <Text fontSize="lg">
+        <strong>Email:</strong> {profile.email}
+      </Text>
+    </Box>
   );
 };
